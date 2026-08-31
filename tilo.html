@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="uk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Анкета знайомства — ТІЛО КЛАБ</title>
+<style>:root{--bg:linear-gradient(180deg,#fdf3e6 0%,#fbf6ee 45%,#f7ead8 100%) fixed;--ink:#2b1f16;--hd:linear-gradient(135deg,#8f4842 0%,#b8635b 40%,#e0955f 100%);--acc:#c0603a;--accd:#8f4842;--soft:#fbeadb;--soft2:#fefaf5;--line:#ecd9c2;--ring:rgba(192,96,58,.18)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 60px}
+header{background:var(--hd);color:#fff;padding:24px 20px 22px}
+header .in{max-width:860px;margin:0 auto}
+header .tag{font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.8}
+header h1{margin:8px 0 6px;font-size:27px;line-height:1.2;font-weight:700}
+header p{margin:0;opacity:.9;font-size:15px}
+header{padding-bottom:16px}
+.alert.up{margin-top:14px}
+.alert{background:#fff4f4;border:1px solid #f0c9c9;border-left:5px solid #d0021b;border-radius:10px;padding:13px 16px;margin:20px 0 0;font-size:14.5px;line-height:1.45}
+.alert b{color:#b3021a}
+.alert .badge{display:inline-block;background:var(--acc);color:#fff;border-radius:20px;padding:1px 11px;font-size:14px;font-weight:700;vertical-align:baseline}
+.alert .big{display:block;font-size:16px;line-height:1.5;letter-spacing:.01em}
+.intro{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:20px 0;font-size:14px;line-height:1.45}
+.intro b{color:var(--accd)}
+.intro ul{margin:10px 0 0;padding-left:20px}
+.intro li{margin:2px 0}
+.part{margin:34px 0 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.part+.part{margin-top:38px;position:relative}
+.part+.part::before{content:'';position:absolute;left:12%;right:12%;top:-20px;height:2px;background:linear-gradient(90deg,transparent,var(--acc),transparent);opacity:.35}
+.part h2{margin:0;background:var(--soft);color:var(--accd);font-size:16px;padding:12px 18px;border-bottom:2px solid var(--acc)}
+.pnote{padding:10px 18px 0;font-size:13px;line-height:1.4;color:#555}
+.field{padding:9px 18px;border-bottom:1px solid #f0f0f0}
+.field:last-child{border-bottom:0}
+.lbl{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.num{flex:0 0 auto;min-width:44px;font-weight:700;color:var(--acc);font-size:13px;font-variant-numeric:tabular-nums}
+.txt{flex:1 1 240px;font-weight:600}
+.req{font-size:11px;background:var(--acc);color:#fff;border-radius:20px;padding:2px 9px}
+.rec-tag{font-size:11px;background:#fff6e5;color:#8a5a00;border:1px solid #f0d9a8;border-radius:20px;padding:1px 9px;white-space:nowrap}
+.opt-rec{border-color:var(--acc);background:var(--soft);box-shadow:0 0 0 2px var(--ring)}
+.pick{display:block;font-size:12px;color:var(--accd);font-weight:700;margin-top:2px}
+.askbtn{margin:6px 0 0 52px;background:#fff;border:1px dashed #b9c0c8;color:#5b6470;border-radius:7px;padding:4px 11px;font:inherit;font-size:12.5px;cursor:pointer}
+.askbtn:hover{border-color:var(--acc);color:var(--accd)}
+.askbtn.on{background:#fff8e6;border:1px solid #e8c56a;color:#8a5a00;font-weight:600}
+.field.asked{background:#fffdf5}
+.askmsg{margin:5px 0 0 52px;font-size:12.5px;line-height:1.35;color:#8a5a00;background:#fff6e2;border-radius:6px;padding:5px 10px}
+.field.gap{background:#fff5f5;box-shadow:inset 4px 0 0 #d0021b}
+.gapmsg{margin:5px 0 0 52px;font-size:12.5px;line-height:1.35;color:#b3021a;background:#ffe9e9;border-radius:6px;padding:5px 10px;font-weight:600}
+.field.gap input[type=text],.field.gap textarea{border-color:#d0021b;background:#fffafa}
+.field.gap .opt{border-color:#e9a9a9}
+#cnt{font-size:13px;font-weight:700;margin-right:4px}
+#cnt.ok{color:#1d7a43}
+#cnt.bad{color:#b3021a}
+.bar button#ck{background:var(--soft);border-color:var(--acc)}
+.star{color:#d0021b;font-weight:700;margin-left:4px}
+.law-tag{font-size:11px;background:#fff4e3;color:#a8560a;border:1px dashed #e0a86a;border-radius:20px;padding:1px 9px;white-space:nowrap;font-weight:600}
+.want-tag{font-size:11px;background:#fff4e3;color:#a8560a;border:1px solid #f0c99a;border-radius:20px;padding:1px 9px;white-space:nowrap;font-weight:600}
+.star.want{color:#e07b12}
+.opt-tag{font-size:11px;background:#fff;color:#8a939c;border:1px solid #dde2e7;border-radius:20px;padding:1px 9px;white-space:nowrap}
+.hint{margin:3px 0 0 52px;font-size:12.5px;line-height:1.35;color:#5b6470;background:var(--soft);border-left:3px solid var(--acc);padding:5px 10px;border-radius:0 8px 8px 0}
+input[type=text],textarea{width:calc(100% - 52px);margin:5px 0 0 52px;padding:6px 10px;border:1px solid #ccd2d8;border-radius:8px;font:inherit;background:#fff}
+input[type=text]:focus,textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px var(--ring)}
+.opts{margin:5px 0 0 52px;display:flex;gap:7px;flex-wrap:wrap}
+.opts.col{flex-direction:column;gap:4px}
+.opt{display:flex;gap:7px;align-items:flex-start;border:1px solid #ccd2d8;border-radius:7px;padding:5px 10px;cursor:pointer;background:#fff}
+.opt:hover{border-color:var(--acc)}
+.opt input{margin:2px 0 0;accent-color:var(--acc)}
+.group{padding:12px 18px;border-bottom:1px solid #f0f0f0;background:var(--soft2)}
+.glbl{display:flex;gap:10px;align-items:baseline}
+.nonebox{display:flex;gap:8px;align-items:center;margin:6px 0 0 52px;padding:6px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:14px;font-weight:600;color:var(--accd);cursor:pointer;width:fit-content}
+.nonebox input{accent-color:var(--acc)}
+.cards{margin:6px 0 0 52px}
+.card{border:1px solid var(--line);border-radius:9px;margin:0 0 7px;background:var(--soft2)}
+.card .field{padding:7px 12px}
+.card input[type=text],.card textarea,.card .opts,.card .hint{margin-left:0;width:100%}
+.cardhd{display:flex;justify-content:space-between;align-items:center;padding:6px 12px;font-weight:700;color:var(--accd);font-size:14px;border-bottom:1px solid var(--line)}
+.add{margin:3px 0 0 52px;background:var(--acc);color:#fff;border:0;border-radius:7px;padding:6px 13px;font:inherit;font-weight:600;cursor:pointer}
+.add:hover{background:var(--accd)}
+.del{background:none;border:0;color:#a33;cursor:pointer;font:inherit;font-size:13px;text-decoration:underline}
+.bar{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line);padding:9px 18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:flex-end;z-index:5}
+.bar button{border:1px solid var(--acc);background:#fff;color:var(--accd);border-radius:7px;padding:7px 14px;font:inherit;font-weight:600;cursor:pointer}
+.bar button#ck{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:700}
+.bar button#ck:hover{background:var(--accd);border-color:var(--accd)}
+.bar button#snd{background:#fff;color:var(--accd);border-color:var(--acc);font-size:16px;padding:10px 24px;font-weight:700}
+.bar button#snd.ready{background:#1d7a43;border-color:#1d7a43;color:#fff}
+.bar button:disabled{background:#f2f4f6;border-color:#e2e6ea;color:#a8b0b8;cursor:not-allowed}
+.bar button#ck{font-weight:700}
+.bar .sp{flex:1}
+#saved{font-size:13px;color:#2c8a4a;opacity:0;transition:.2s}
+#saved.on{opacity:1}
+@media print{.bar,.add,.del{display:none}body{background:#fff}}
+@media(max-width:600px){
+ .gapmsg,.askmsg,.askbtn,.nonebox{margin-left:0}
+ .hint,input[type=text],textarea,.opts,.cards,.add{margin-left:0;width:100%}
+ .num{min-width:auto}
+}
+
+#veil{position:fixed;inset:0;background:rgba(20,26,33,.55);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;z-index:50}
+#veil.on{display:flex}
+#veil .box{background:#fff;border-radius:18px;padding:26px 30px;text-align:center;box-shadow:0 18px 50px rgba(0,0,0,.3);min-width:230px;max-width:min(440px,90vw)}
+#veil .box.wide{padding:28px 30px 22px;text-align:left}
+#veil .mi{width:46px;height:46px;border-radius:50%;font-size:26px;line-height:46px;text-align:center;font-weight:700;margin:0 auto 12px}
+#veil .mi.ok{background:#e7f5ec;color:#1d7a43}
+#veil .mi.warn{background:#fdecec;color:#c00000}
+#veil .mt{font-size:19px;font-weight:800;text-align:center;margin-bottom:12px;color:var(--accd)}
+#veil .mt.ok{color:#1d7a43}
+#veil .mt.warn{color:#c00000}
+#veil .ml p{margin:0 0 10px;font-size:14.5px;line-height:1.5;color:#3b444e}
+#veil .ml .fname{display:block;background:#f4f6f8;border-radius:8px;padding:7px 11px;font-size:13px;color:#5b6470;word-break:break-all}
+#veil .mb{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+#veil .mb button{border-radius:10px;padding:10px 20px;font:inherit;font-size:14.5px;font-weight:700;cursor:pointer;border:1px solid var(--acc)}
+#veil .mb .mp{background:var(--acc);color:#fff}
+#veil .mb .mp:hover{background:var(--accd);border-color:var(--accd)}
+#veil .mb .ms{background:#fff;color:#5b6470;border-color:#ccd2d8}
+#veil .spin{width:34px;height:34px;margin:0 auto 14px;border:3px solid var(--soft);border-top-color:var(--acc);border-radius:50%;animation:sp .8s linear infinite}
+#veil .txt{font-weight:700;color:var(--accd);font-size:15px}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+#veil .done{font-size:17px;font-weight:800;color:#1d7a43;margin-bottom:6px}
+#veil .fname{font-size:13px;color:#5b6470;word-break:break-all;background:#f4f6f8;border-radius:8px;padding:6px 10px;margin-bottom:12px}
+#veil .steps{font-size:14px;line-height:1.45;color:#3b444e;margin-bottom:16px;max-width:320px}
+#veil .btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+#veil .tg{background:var(--acc);color:#fff;text-decoration:none;border-radius:9px;padding:9px 18px;font-weight:700;font-size:14px}
+#veil .cls{background:#fff;border:1px solid #ccd2d8;border-radius:9px;padding:9px 18px;font:inherit;font-size:14px;cursor:pointer}
+
+.bar .ver{font-size:11.5px;color:#aab1b8;margin-right:10px}
+
+#veil .check{width:52px;height:52px;margin:0 auto 12px;border-radius:50%;background:#1d7a43;color:#fff;font-size:30px;line-height:52px;font-weight:700}
+
+header .who{margin:14px 0 0;font-size:17px;font-weight:700;letter-spacing:.02em;background:#fff;color:#c00000;display:inline-block;padding:8px 20px;border-radius:24px;box-shadow:0 3px 12px rgba(0,0,0,.18)}
+header .who b{color:#c00000;font-size:19px;letter-spacing:.03em}
+.bar .rst{font-size:11.5px;color:#b9c0c8;text-decoration:underline;margin-right:12px}
+.bar .rst:hover{color:#8a939c}
+
+.copybox{margin:0;padding:10px 18px;border-bottom:1px solid #f0f0f0;background:var(--soft2)}
+.copybox.on{background:var(--soft)}
+.copybox label{display:flex;gap:9px;align-items:center;font-weight:700;color:var(--accd);cursor:pointer;font-size:14.5px}
+.copybox input{accent-color:var(--acc);width:16px;height:16px}
+.copybox .hint{margin-left:25px}
+
+.notice{margin:8px 0 0 52px;background:#fff3f3;border:1px solid #f0c9c9;border-left:5px solid #d0021b;border-radius:0 10px 10px 0;padding:11px 14px;font-size:14.5px;line-height:1.5;color:#7a1620}
+.notice b{color:#b3021a}
+.notice .cap{display:block;font-weight:800;letter-spacing:.01em;color:#b3021a;margin-bottom:4px}
+@media(max-width:600px){.notice{margin-left:0}}
+
+input[type=text].short{width:150px;min-width:150px}
+@media(max-width:600px){input[type=text].short{width:60%}}
+
+.opts.scale{display:flex;gap:5px;margin-top:4px}
+.opts.scale .opt{flex:1;min-width:0;margin:0;padding:9px 0;justify-content:center;text-align:center;
+ border:1px solid var(--line);border-radius:8px;background:#fff;font-weight:600;font-size:14px}
+.opts.scale .opt input{display:none}
+.opts.scale .opt span{padding:0;text-align:center}
+.opts.scale .opt:has(input:checked){background:var(--acc);border-color:var(--accd);color:#fff}
+@media(max-width:440px){.opts.scale{gap:3px}.opts.scale .opt{padding:8px 0;font-size:13px;border-radius:6px}}
+.lang{display:flex;gap:6px;margin-top:10px}
+.lang button{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.45);
+ border-radius:20px;padding:6px 14px;font-size:13px;font-weight:600;cursor:pointer;width:auto}
+.lang button.on{background:#fff;color:var(--accd);border-color:#fff}
+</style></head>
+<body>
+<header><div class="in">
+<div class="tag">ТІЛО КЛАБ</div>
+<div id="lang" class="lang"></div>
+<h1>Анкета знайомства</h1>
+<p>Перед індивідуальною консультацією</p>
+</div></header>
+<div class="wrap">
+<div class="intro">
+<b>Як заповнювати · Как заполнять</b>
+<ul>
+<li>Обери мову вгорі — українська або російська. Можна перемикати будь-коли, відповіді збережуться.<br><span style="color:#7a6a5c">Выбери язык вверху — украинский или русский. Переключать можно в любой момент, ответы сохранятся.</span></li>
+<li>Відповідай як є, без прикрас — це потрібно, щоб скласти план саме під тебе.</li>
+<li>Пункти з <b style="color:#d0021b">*</b> потрібно заповнити обов'язково.</li>
+<li>Відповіді зберігаються самі — можна закрити сторінку і повернутись пізніше.</li>
+<li><b>Коли закінчиш:</b> натисни <b>«Я все заповнила — перевірити»</b>. Пропущені пункти підсвітяться червоним. Коли пропусків не залишиться, натисни <b>«Відправити»</b> і вибери <b>Telegram</b>.</li>
+</ul>
+</div>
+<div id="form"></div>
+</div>
+<div id="veil"><div class="box"><div class="spin"></div><div class="txt">Готуємо файл…</div></div></div>
+<div class="bar">
+<span class="ver">версія 31.08 20:39</span><span id="saved">збережено</span><span class="sp"></span>
+<span id="cnt"></span>
+<button id="ck">Я все заповнила — перевірити</button>
+<button id="snd">Відправити</button>
+</div>
+<script>window.FORM_KEY="tilo_klab";</script>
+<script>const SPEC = [
+{part:"Про тебе", part_ru:"О тебе", items:[
+ {"k":"name", "n":"1.", "q":"Ім'я", "q_ru":"Имя", "req":1},
+ {"k":"age", "n":"2.", "q":"Вік", "q_ru":"Возраст", "req":1, "short":1},
+ {"k":"work", "n":"3.", "q":"Чим займаєшся (робота / навчання / діти)", "q_ru":"Чем занимаешься (работа / учёба / дети)", "t":"area", "req":1},
+ {"k":"wd", "n":"4.", "q":"Графік у будні (пн–пт)", "q_ru":"График в будни (пн–пт)", "t":"area", "req":1, "hint":"Підйом, робота, вільний час, відбій. Напр.: підйом 6:30, робота 9-18, вдома після 19, спати о 23.", "hint_ru":"Подъём, работа, свободное время, отбой. Напр.: подъём 6:30, работа 9-18, дома после 19, спать в 23."},
+ {"k":"we", "n":"5.", "q":"Графік у вихідні (сб–нд) — чим відрізняється", "q_ru":"График в выходные (сб–вс) — чем отличается", "t":"area", "req":1}
+]},
+{part:"Здоров'я", part_ru:"Здоровье", items:[
+ {"k":"health", "n":"6.", "q":"Хронічні захворювання, про які варто знати", "q_ru":"Хронические заболевания, о которых стоит знать", "t":"area", "noTag":1, "hint":"Якщо немає — напиши «немає».", "hint_ru":"Если нет — напиши «нет»."},
+ {"k":"meds", "n":"7.", "q":"Постійні ліки / гормональні препарати", "q_ru":"Постоянные лекарства / гормональные препараты", "t":"area", "noTag":1, "hint":"Якщо немає — напиши «немає».", "hint_ru":"Если нет — напиши «нет»."},
+ {"k":"doctor", "n":"8.", "q":"Є дозвіл лікаря на фізичні навантаження без обмежень?", "q_ru":"Есть разрешение врача на физические нагрузки без ограничений?", "t":"radio", "req":1, "o":["Так", "Ні, є обмеження", "Не перевіряла"], "o_ru":["Да", "Нет, есть ограничения", "Не проверяла"]}
+]},
+{part:"Харчування", part_ru:"Питание", items:[
+ {"k":"b_has", "n":"9.", "q":"Сніданок — чи є він у тебе?", "q_ru":"Завтрак — есть ли он у тебя?", "t":"radio", "req":1, "o":["Є", "Немає"], "o_ru":["Есть", "Нет"]},
+ {"k":"b_txt", "n":"9.a.", "q":"Що зазвичай їси на сніданок", "q_ru":"Что обычно ешь на завтрак", "t":"area", "noTag":1},
+ {"k":"s1_has", "n":"10.", "q":"Перекус між сніданком і обідом — чи є?", "q_ru":"Перекус между завтраком и обедом — есть?", "t":"radio", "req":1, "o":["Є", "Немає"], "o_ru":["Есть", "Нет"]},
+ {"k":"s1_txt", "n":"10.a.", "q":"Що саме", "q_ru":"Что именно", "t":"area", "noTag":1},
+ {"k":"l_has", "n":"11.", "q":"Обід — чи є?", "q_ru":"Обед — есть?", "t":"radio", "req":1, "o":["Є", "Немає"], "o_ru":["Есть", "Нет"]},
+ {"k":"l_txt", "n":"11.a.", "q":"Що зазвичай їси на обід", "q_ru":"Что обычно ешь на обед", "t":"area", "noTag":1},
+ {"k":"s2_has", "n":"12.", "q":"Перекус між обідом і вечерею — чи є?", "q_ru":"Перекус между обедом и ужином — есть?", "t":"radio", "req":1, "o":["Є", "Немає"], "o_ru":["Есть", "Нет"]},
+ {"k":"s2_txt", "n":"12.a.", "q":"Що саме", "q_ru":"Что именно", "t":"area", "noTag":1},
+ {"k":"d_has", "n":"13.", "q":"Вечеря — чи є?", "q_ru":"Ужин — есть?", "t":"radio", "req":1, "o":["Є", "Немає"], "o_ru":["Есть", "Нет"]},
+ {"k":"d_txt", "n":"13.a.", "q":"Що зазвичай їси на вечерю", "q_ru":"Что обычно ешь на ужин", "t":"area", "noTag":1},
+ {"k":"alc", "n":"14.", "q":"Чи вживаєш алкоголь, як часто", "q_ru":"Употребляешь ли алкоголь, как часто", "t":"radio", "req":1, "o":["Не вживаю взагалі", "Дуже рідко — кілька разів на рік", "Раз на місяць або рідше", "2–3 рази на місяць", "Раз на тиждень", "2–3 рази на тиждень", "Майже щодня"], "o_ru":["Не употребляю совсем", "Очень редко — несколько раз в год", "Раз в месяц или реже", "2–3 раза в месяц", "Раз в неделю", "2–3 раза в неделю", "Почти каждый день"]},
+ {"k":"diets", "n":"15.", "q":"Чи пробувала дієти раніше — які, що спрацювало, що ні", "q_ru":"Пробовала ли диеты раньше — какие, что сработало, что нет", "t":"area", "req":1}
+]},
+{part:"Коли їси не від голоду", part_ru:"Когда ешь не от голода", items:[
+ {"k":"e_stress", "n":"16.", "q":"Від стресу чи напруги", "q_ru":"От стресса или напряжения", "t":"radio", "req":1, "o":["Так", "Іноді", "Ні"], "o_ru":["Да", "Иногда", "Нет"]},
+ {"k":"e_tired", "n":"17.", "q":"Від втоми", "q_ru":"От усталости", "t":"radio", "req":1, "o":["Так", "Іноді", "Ні"], "o_ru":["Да", "Иногда", "Нет"]},
+ {"k":"e_bored", "n":"18.", "q":"Від нудьги", "q_ru":"От скуки", "t":"radio", "req":1, "o":["Так", "Іноді", "Ні"], "o_ru":["Да", "Иногда", "Нет"]},
+ {"k":"e_sad", "n":"19.", "q":"Від смутку чи тривоги", "q_ru":"От грусти или тревоги", "t":"radio", "req":1, "o":["Так", "Іноді", "Ні"], "o_ru":["Да", "Иногда", "Нет"]},
+ {"k":"e_reward", "n":"20.", "q":"Щоб себе винагородити", "q_ru":"Чтобы себя наградить", "t":"radio", "req":1, "o":["Так", "Іноді", "Ні"], "o_ru":["Да", "Иногда", "Нет"]},
+ {"k":"e_company", "n":"21.", "q":"За компанію, хоча не голодна", "q_ru":"За компанию, хотя не голодна", "t":"radio", "req":1, "o":["Так", "Іноді", "Ні"], "o_ru":["Да", "Иногда", "Нет"]},
+ {"k":"e_night", "n":"22.", "q":"Вночі або перед сном", "q_ru":"Ночью или перед сном", "t":"radio", "req":1, "o":["Так", "Іноді", "Ні"], "o_ru":["Да", "Иногда", "Нет"]}
+]},
+{part:"Сон і стрес", part_ru:"Сон и стресс", items:[
+ {"k":"sleep", "n":"23.", "q":"Скільки годин зазвичай спиш", "q_ru":"Сколько часов обычно спишь", "req":1, "short":1, "ph":"напр. 6-7 годин", "ph_ru":"напр. 6-7 часов"},
+ {"k":"stress", "n":"24.", "q":"Рівень стресу зараз (0 — зовсім немає, 10 — на межі)", "q_ru":"Уровень стресса сейчас (0 — совсем нет, 10 — на пределе)", "t":"radio", "req":1, "o":["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]},
+ {"k":"relax", "n":"25.", "q":"Що зазвичай допомагає розслабитись", "q_ru":"Что обычно помогает расслабиться", "t":"area", "noTag":1}
+]},
+{part:"Рух і активність", part_ru:"Движение и активность", items:[
+ {"k":"act", "n":"26.", "q":"Чи є зараз якась регулярна фізична активність, яка саме", "q_ru":"Есть ли сейчас регулярная физическая активность, какая именно", "t":"area", "req":1},
+ {"k":"home", "n":"27.", "q":"Чи тренувалась вдома раніше — що подобалось / не подобалось", "q_ru":"Тренировалась ли дома раньше — что нравилось / не нравилось", "t":"area", "req":1},
+ {"k":"time", "n":"28.", "q":"Скільки часу реально готова виділяти на рух на тиждень (чесно)", "q_ru":"Сколько времени реально готова выделять на движение в неделю (честно)", "req":1, "ph":"напр. 2-3 рази по 20 хв", "ph_ru":"напр. 2-3 раза по 20 мин"},
+ {"k":"limit", "n":"29.", "q":"Обмеження (травми, суглоби, спина тощо), про які треба знати", "q_ru":"Ограничения (травмы, суставы, спина и т.д.), о которых нужно знать", "t":"area", "noTag":1, "hint":"Якщо немає — напиши «немає».", "hint_ru":"Если нет — напиши «нет»."}
+]},
+{part:"Точка А — де ти зараз", part_ru:"Точка А — где ты сейчас", items:[
+ {"k":"energy", "n":"30.", "q":"Рівень енергії протягом дня (0 — зовсім немає, 10 — багато енергії)", "q_ru":"Уровень энергии в течение дня (0 — совсем нет, 10 — много энергии)", "t":"radio", "req":1, "o":["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]},
+ {"k":"body", "n":"31.", "q":"Задоволеність своїм тілом зараз (0 — зовсім немає, 10 — повністю)", "q_ru":"Удовлетворённость своим телом сейчас (0 — совсем нет, 10 — полностью)", "t":"radio", "req":1, "o":["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]},
+ {"k":"self", "n":"32.", "q":"Наскільки ти собі подобаєшся / приймаєш себе (0 — зовсім немає, 10 — повністю)", "q_ru":"Насколько ты себе нравишься / принимаешь себя (0 — совсем нет, 10 — полностью)", "t":"radio", "req":1, "o":["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]},
+ {"k":"height", "n":"33.", "q":"Зріст", "q_ru":"Рост", "short":1, "noTag":1, "ph":"напр. 167 см", "ph_ru":"напр. 167 см"},
+ {"k":"weight", "n":"34.", "q":"Вага", "q_ru":"Вес", "short":1, "noTag":1, "ph":"напр. 68 кг", "ph_ru":"напр. 68 кг"},
+]},
+{part:"Точка Б — куди хочеш прийти", part_ru:"Точка Б — куда хочешь прийти", items:[
+ {"k":"wgoal", "n":"35.", "q":"Бажана вага", "q_ru":"Желаемый вес", "short":1, "noTag":1, "ph":"напр. 60 кг", "ph_ru":"напр. 60 кг"},
+ {"k":"stress_g", "n":"36.", "q":"Бажаний рівень стресу (0 — зовсім немає, 10 — на межі)", "q_ru":"Желаемый уровень стресса (0 — совсем нет, 10 — на пределе)", "t":"radio", "req":1, "o":["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]},
+ {"k":"energy_g", "n":"37.", "q":"Бажаний рівень енергії", "q_ru":"Желаемый уровень энергии", "t":"radio", "req":1, "o":["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]},
+ {"k":"body_g", "n":"38.", "q":"Бажана задоволеність тілом", "q_ru":"Желаемая удовлетворённость телом", "t":"radio", "req":1, "o":["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]},
+ {"k":"self_g", "n":"39.", "q":"Бажаний рівень прийняття себе", "q_ru":"Желаемый уровень принятия себя", "t":"radio", "req":1, "o":["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]},
+ {"k":"succ", "n":"40.", "q":"Що для тебе буде успіхом через 3 місяці? Через 6?", "q_ru":"Что для тебя будет успехом через 3 месяца? Через 6?", "t":"area", "req":1},
+ {"k":"why", "n":"41.", "q":"Чому саме зараз ти вирішила цим зайнятись?", "q_ru":"Почему именно сейчас ты решила этим заняться?", "t":"area", "req":1},
+ {"k":"block", "n":"42.", "q":"Що заважало раніше досягати цього результату (чесно)", "q_ru":"Что мешало раньше достигать этого результата (честно)", "t":"area", "req":1},
+ {"k":"exp", "n":"43.", "q":"Чого ти очікуєш від клубу / від Марини", "q_ru":"Чего ты ждёшь от клуба / от Марины", "t":"area", "req":1},
+ {"k":"pers", "n":"44.", "q":"Є щось особисте, чим хочеш поділитись", "q_ru":"Есть что-то личное, чем хочешь поделиться", "t":"area", "noTag":1}
+]}
+];</script>
+<script>/* Минимальный генератор .docx без внешних библиотек */
+var DOCX = (function(){
+var T=(function(){var c=[];for(var n=0;n<256;n++){var k=n;for(var j=0;j<8;j++)k=k&1?0xEDB88320^(k>>>1):k>>>1;c[n]=k>>>0;}return c;})();
+function crc32(u8){var c=0xFFFFFFFF;for(var i=0;i<u8.length;i++)c=T[(c^u8[i])&0xFF]^(c>>>8);return (c^0xFFFFFFFF)>>>0;}
+function str(s){return new TextEncoder().encode(s);}
+function num(v,n){var a=new Uint8Array(n);for(var i=0;i<n;i++)a[i]=(v>>>(8*i))&0xFF;return a;}
+function cat(arrs){var len=0;arrs.forEach(function(a){len+=a.length;});var out=new Uint8Array(len),o=0;arrs.forEach(function(a){out.set(a,o);o+=a.length;});return out;}
+function zip(files){ // files: [{name, data:Uint8Array}]
+  var local=[],central=[],offset=0;
+  files.forEach(function(f){
+    var nb=str(f.name), c=crc32(f.data), sz=f.data.length;
+    var lh=cat([num(0x04034b50,4),num(20,2),num(0,2),num(0,2),num(0,2),num(0,2),num(c,4),num(sz,4),num(sz,4),num(nb.length,2),num(0,2),nb,f.data]);
+    local.push(lh);
+    central.push(cat([num(0x02014b50,4),num(20,2),num(20,2),num(0,2),num(0,2),num(0,2),num(0,2),num(c,4),num(sz,4),num(sz,4),num(nb.length,2),num(0,2),num(0,2),num(0,2),num(0,2),num(0,4),num(offset,4),nb]));
+    offset+=lh.length;
+  });
+  var cd=cat(central);
+  var end=cat([num(0x06054b50,4),num(0,2),num(0,2),num(files.length,2),num(files.length,2),num(cd.length,4),num(offset,4),num(0,2)]);
+  return new Blob([cat(local.concat([cd,end]))],{type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function runs(text,o){o=o||{};
+  var rpr='<w:rPr>'+(o.b?'<w:b/>':'')+(o.color?'<w:color w:val="'+o.color+'"/>':'')+(o.sz?'<w:sz w:val="'+o.sz+'"/>':'<w:sz w:val="26"/>')+(o.shd?'<w:shd w:val="clear" w:fill="'+o.shd+'"/>':'')+'</w:rPr>';
+  return String(text).split('\n').map(function(line,i){
+    return (i?'<w:r>'+rpr+'<w:br/></w:r>':'')+'<w:r>'+rpr+'<w:t xml:space="preserve">'+esc(line)+'</w:t></w:r>';
+  }).join('');
+}
+function p(parts,o){o=o||{};
+  var ppr='<w:pPr>'+(o.style?'<w:pStyle w:val="'+o.style+'"/>':'')+(o.shd?'<w:shd w:val="clear" w:fill="'+o.shd+'"/>':'')+(o.space?'<w:spacing w:before="'+(o.space)+'"/>':'')+'</w:pPr>';
+  return '<w:p>'+ppr+parts+'</w:p>';
+}
+function build(body){
+  var doc='<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>'+body+'<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1000" w:right="900" w:bottom="1000" w:left="900"/></w:sectPr></w:body></w:document>';
+  var ct='<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>';
+  var rels='<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>';
+  return zip([{name:'[Content_Types].xml',data:str(ct)},{name:'_rels/.rels',data:str(rels)},{name:'word/document.xml',data:str(doc)}]);
+}
+
+function tc(text,o,w){o=o||{};
+  return '<w:tc><w:tcPr><w:tcW w:w="'+(w||3000)+'" w:type="dxa"/>'
+    + (o.span?'<w:gridSpan w:val="'+o.span+'"/>':'')
+    + (o.btop?'<w:tcBorders><w:top w:val="single" w:sz="8" w:space="0" w:color="'+o.btop+'"/></w:tcBorders>':'')
+    + (o.shd?'<w:shd w:val="clear" w:fill="'+o.shd+'"/>':'')
+    + '<w:tcMar><w:top w:w="90" w:type="dxa"/><w:bottom w:w="90" w:type="dxa"/><w:left w:w="130" w:type="dxa"/><w:right w:w="130" w:type="dxa"/></w:tcMar>'
+    + '<w:vAlign w:val="center"/>'
+    + '</w:tcPr>' + p(runs(text,o)) + '</w:tc>';
+}
+function tr(cells){ return '<w:tr>'+cells.join('')+'</w:tr>'; }
+function table(rows){
+  return '<w:tbl><w:tblPr><w:tblW w:w="10080" w:type="dxa"/>'
+    + '<w:tblBorders>'
+    + ['top','bottom'].map(function(s){return '<w:'+s+' w:val="single" w:sz="4" w:space="0" w:color="D9DEE3"/>';}).join('')
+    + '<w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>'
+    + '<w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>'
+    + '</w:tblBorders><w:tblLayout w:type="fixed"/></w:tblPr>'
+    + '<w:tblGrid><w:gridCol w:w="740"/><w:gridCol w:w="5540"/><w:gridCol w:w="3800"/></w:tblGrid>'
+    + rows.join('') + '</w:tbl>';
+}
+return {build:build,p:p,runs:runs,tc:tc,tr:tr,table:table};
+})();
+</script>
+<script>(function(){
+const KEY = window.FORM_KEY;
+let LANG = 'uk';
+try { LANG = localStorage.getItem(KEY+'_lang') || 'uk'; } catch(e){}
+function L(o, key){ return (LANG==='ru' && o[key+'_ru']) ? o[key+'_ru'] : (o[key]||''); }
+function OPTS(f){ return (LANG==='ru' && f.o_ru) ? f.o_ru : f.o; }
+const UI = {
+ uk:{req:'обов’язково', want:'бажано', opt:'якщо є що сказати',
+     optnote:'Заповнюй, якщо це про тебе. Якщо ні — просто пропусти.',
+     gap:'Цей пункт обов’язковий.', saved:'збережено',
+     check:'Я все заповнила — перевірити', send:'Відправити',
+     lang:'Мова', done:'Все готово', doneTxt:'Усі обов’язкові пункти заповнені.',
+     nowSend:'Тепер натисни «Відправити» і вибери Telegram.', ok:'Добре',
+     leftTitle:'Залишилось заповнити: ', leftTxt:'Пропущені пункти підсвічені червоним — прогорни анкету і заповни їх.',
+     back:'Повернутись до анкети', notAll:'Ще не все заповнено',
+     notAllTxt:'Обов’язкових пунктів без відповіді: ', asIs:'Відправити як є', backShort:'Повернутись',
+     prep:'Готуємо файл…', failTitle:'Не вдалось зібрати файл', failTxt:'Спробуй натиснути «Відправити» ще раз.',
+     sentTitle:'Файл відправлено', sentTxt:'Дякую! Ми отримаємо твою анкету і зв’яжемось з тобою.',
+     close:'Закрити', savedTitle:'Файл збережено',
+     savedTxt1:'Залишився один крок: відкрий наш чат у Telegram і прикріпи цей файл.',
+     savedTxt2:'На комп’ютері він у папці Завантаження (Downloads).', openTg:'Відкрити Telegram'},
+ ru:{req:'обязательно', want:'желательно', opt:'если есть что сказать',
+     optnote:'Заполняй, если это про тебя. Если нет — просто пропусти.',
+     gap:'Этот пункт обязательный.', saved:'сохранено',
+     check:'Я всё заполнила — проверить', send:'Отправить',
+     lang:'Язык', done:'Всё готово', doneTxt:'Все обязательные пункты заполнены.',
+     nowSend:'Теперь нажми «Отправить» и выбери Telegram.', ok:'Хорошо',
+     leftTitle:'Осталось заполнить: ', leftTxt:'Пропущенные пункты подсвечены красным — пролистай анкету и заполни их.',
+     back:'Вернуться к анкете', notAll:'Ещё не всё заполнено',
+     notAllTxt:'Обязательных пунктов без ответа: ', asIs:'Отправить как есть', backShort:'Вернуться',
+     prep:'Готовим файл…', failTitle:'Не удалось собрать файл', failTxt:'Попробуй нажать «Отправить» ещё раз.',
+     sentTitle:'Файл отправлен', sentTxt:'Спасибо! Мы получим твою анкету и свяжемся с тобой.',
+     close:'Закрыть', savedTitle:'Анкета сохранена в файл',
+     savedTxt1:'<b>Шаг 1.</b> Файл лежит в <b>Загрузках</b>: на iPhone — приложение «Файлы» → <b>Загрузки</b>; на Android — «Мои файлы» → <b>Download</b>.',
+     savedTxt2:'<b>Шаг 2.</b> Открой чат с Мариной в Telegram → <b>скрепка</b> → <b>Файл</b> → выбери этот файл и отправь.',
+     openTg:'Открыть Telegram'}
+};
+function T(k){ return UI[LANG][k]; }
+let store = {};
+try { store = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch(e) { store = {}; }
+let showGaps = false;
+let t=null;
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(store)); } catch(e){} flash(); updateBar(); }
+function flash(){ const el=document.getElementById('saved'); if(!el) return; el.classList.add('on'); clearTimeout(t); t=setTimeout(()=>el.classList.remove('on'),1200); }
+function esc(s){ return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function idOf(p){ return p.replace(/[^a-zA-Z0-9_]/g,'_'); }
+function syncCopies(changedPath){
+  let touched=false;
+  SPEC.forEach((p,pi)=>p.items.forEach(it=>{
+    if(it.t!=='copy') return;
+    const path='p'+pi+'.'+it.k;
+    if(store['copyv2.'+path] !== true) return;
+    Object.keys(it.map).forEach(to=>{
+      const from = it.map[to];
+      if(changedPath && from !== changedPath) return;
+      const v = store[from];
+      if(v !== undefined && store[to] !== v){ store[to] = v; touched = true; }
+    });
+  }));
+  return touched;
+}
+function empty(v){ return v==null || v==='' || (Array.isArray(v) && v.length===0); }
+function isAsk(v){ return v===ASK; }
+
+const OPT_NOTE = 'Заповнюй, якщо це про тебе. Якщо ні — просто пропусти.';
+const ASK = '__ASK__';
+
+function fieldHTML(f, path){
+  const v = store[path];
+  const miss = f.req && empty(v);
+  const tags = f.req ? `<span class="req">${T('req')}</span>`
+             : (f.want ? `<span class="want-tag">${T('want')}</span>`
+             : (f.noTag ? '' : `<span class="opt-tag">${T('opt')}</span>`));
+  const star = f.req ? '<span class="star">*</span>' : (f.want ? '<span class="star want">*</span>' : '');
+  const hint = L(f,'hint') ? L(f,'hint') : ((f.req || f.noTag) ? '' : T('optnote'));
+  const asked = isAsk(v);
+  function optRow(o, checked, type, label){
+    const rec = f.recOpt && f.recOpt.indexOf(o)>=0;
+    const t = type || 'radio';
+    return `<label class="opt${rec?' opt-rec':''}"><input type="${t}" data-path="${esc(path)}" name="${idOf(path)}" value="${esc(o)}" ${checked?'checked':''}><span>${esc(label||o)}${rec?('<b class="pick">← '+esc(f.pickNote||'Ваш вариант, если подаётесь по EB-1A')+'</b>'):''}</span></label>`;
+  }
+  let inner='';
+  if(f.t==='yn'){
+    inner = '<div class="opts">'+optRow('Так', v==='Так')+optRow('Ні', v==='Ні')+'</div>';
+  } else if(f.t==='radio'){
+    const isScale = f.o.every(x=>/^\d+$/.test(x));
+    inner = '<div class="opts '+(isScale?'scale':'col')+'">'+OPTS(f).map((lbl,i)=>optRow(f.o[i], v===f.o[i], null, lbl)).join('')+'</div>';
+  } else if(f.t==='check'){
+    const arr = Array.isArray(v)?v:[];
+    inner = '<div class="opts col">'+OPTS(f).map((lbl,i)=>optRow(f.o[i], arr.indexOf(f.o[i])>=0, 'checkbox', lbl)).join('')+'</div>';
+  } else if(f.t==='area'){
+    inner = `<textarea rows="3" data-path="${esc(path)}">${(v&&!asked)?esc(v):''}</textarea>`;
+  } else {
+    const ph = L(f,'ph') ? ` placeholder="${esc(L(f,'ph'))}"` : '';
+    inner = `<input type="text" class="${f.short?'short':''}" data-path="${esc(path)}" value="${(v&&!asked)?esc(v):''}"${ph}>`;
+  }
+  const askBtn = '';
+  return `<div class="field${(showGaps&&miss)?' gap':''}${asked?' asked':''}" data-f="${esc(path)}">
+    <div class="lbl"><span class="num">${f.n?esc(f.n):''}</span><span class="txt">${esc(L(f,'q'))}${star}</span>${tags}</div>
+    
+    
+    ${hint?`<div class="hint">${hint}</div>`:''}
+    ${inner}
+    ${askBtn}
+  </div>`;
+}
+
+function itemNum(it, i, f){
+  if(typeof it.num === 'function') return it.num(i, f);
+  return f.n || '';
+}
+
+function groupHTML(g, path, i, total){
+  const rows = g.f.map(f=>{
+    const ff = Object.assign({}, f, {n: itemNum(g, i, f)});
+    return fieldHTML(ff, path+'.'+i+'.'+f.k);
+  }).join('');
+  const del = (total>1) ? `<button class="del" data-del="${esc(path)}" data-i="${i}">удалить</button>` : '';
+  return `<div class="card"><div class="cardhd">${esc(g.item)} ${i+1}${del}</div>${rows}</div>`;
+}
+
+function render(){
+  const root = document.getElementById('form');
+  root.innerHTML = SPEC.map((p,pi)=>{
+    const body = p.items.map(it=>{
+      const path = 'p'+pi+'.'+it.k;
+      if(it.t==='copy'){
+        const on = store['copyv2.'+path] === true;
+        return `<div class="copybox${on?' on':''}"><label><input type="checkbox" data-copy="${esc(it.k)}" data-pi="${pi}" ${on?'checked':''}><span>${esc(L(it,'q'))}</span></label>${it.hint?`<div class="hint">${it.hint}</div>`:''}</div>`;
+      }
+      if(it.t==='group'){
+        const none = it.none && store['none.'+path]===true;
+        const n = Math.max(1, store['count.'+path]||it.min||1);
+        let h = `<div class="group"><div class="glbl"><span class="num">${it.n?esc(it.n):''}</span><span class="txt">${esc(L(it,'q'))}</span></div>${it.notice?`<div class="notice">${it.notice}</div>`:''}${it.hint?`<div class="hint">${it.hint}</div>`:''}`;
+        if(it.none) h += `<label class="nonebox"><input type="checkbox" data-none="${esc(path)}" ${none?'checked':''}><span>${esc(it.none)}</span></label>`;
+        if(!none){
+          h += `<div class="cards" data-cards="${esc(path)}">`;
+          for(let i=0;i<n;i++) h += groupHTML(it, path, i, n);
+          h += `</div><button class="add" data-add="${esc(path)}">+ Добавить ещё (${esc(it.item.toLowerCase())})</button>`;
+        }
+        h += `</div>`;
+        return h;
+      }
+      return fieldHTML(it, path);
+    }).join('');
+    return `<section class="part"><h2>${esc(L(p,'part'))}</h2>${p.note?`<div class="pnote">${p.note}</div>`:''}${body}</section>`;
+  }).join('');
+  updateBar();
+}
+
+function missing(){
+  const out=[];
+  SPEC.forEach((p,pi)=>{
+    p.items.forEach(it=>{
+      const path='p'+pi+'.'+it.k;
+      if(it.t==='group'){
+        if(it.none && store['none.'+path]===true) return;
+        const n = Math.max(1, store['count.'+path]||it.min||1);
+        for(let i=0;i<n;i++) it.f.forEach(f=>{
+          if(f.req && empty(store[path+'.'+i+'.'+f.k]))
+            out.push({part:p.part, n:itemNum(it,i,f), q:it.item+' '+(i+1)+': '+f.q, path:path+'.'+i+'.'+f.k});
+        });
+      } else if(it.req && empty(store[path])){
+        out.push({part:p.part, n:it.n||'', q:it.q, path:path});
+      }
+    });
+  });
+  return out;
+}
+
+function askedList(){ return []; }
+function updateBar(){
+  const m = missing().length, a = 0;
+  const el = document.getElementById('cnt');
+  if(!el) return;
+  let s = m===0 ? T('doneTxt').replace('.','') : (T('leftTitle')+m);
+  if(a) s += ' · обговоримо разом: '+a;
+  el.textContent = s;
+  el.className = m===0 ? 'ok' : 'bad';
+}
+
+document.addEventListener('input', e=>{
+  const el = e.target;
+  if(el.dataset && el.dataset.path && (el.tagName==='TEXTAREA' || el.type==='text')){
+    store[el.dataset.path]=el.value;
+    const w = el.closest('.field'); if(w && el.value) { w.classList.remove('gap'); const g=w.querySelector('.gapmsg'); if(g) g.remove(); }
+    const moved = syncCopies(el.dataset.path);
+    save();
+    if(moved) render();
+  }
+});
+document.addEventListener('change', e=>{
+  const el = e.target;
+  const p = el.dataset && el.dataset.path;
+  if(!p) return;
+  if(el.type==='radio'){ store[p]=el.value; }
+  else if(el.type==='checkbox'){
+    const boxes = document.querySelectorAll('input[type=checkbox][name="'+el.name+'"]');
+    store[p] = Array.from(boxes).filter(b=>b.checked).map(b=>b.value);
+  } else return;
+  const w = el.closest('.field'); if(w){ w.classList.remove('gap'); const g=w.querySelector('.gapmsg'); if(g) g.remove(); }
+  save();
+});
+
+document.addEventListener('click', e=>{
+  const cp = e.target.closest('[data-copy]');
+  if(cp){
+    const pi = Number(cp.dataset.pi);
+    const it = SPEC[pi].items.find(x=>x.k===cp.dataset.copy);
+    const path = 'p'+pi+'.'+it.k;
+    store['copyv2.'+path] = cp.checked;
+    if(cp.checked) syncCopies(null);
+    save(); render(); return;
+  }
+  const nb = e.target.closest('[data-none]');
+  if(nb){ store['none.'+nb.dataset.none] = nb.checked; save(); render(); return; }
+
+  const a = e.target.closest('[data-add]');
+  if(a){ const p=a.dataset.add; store['count.'+p]=(store['count.'+p]||1)+1; save(); render(); return; }
+  const d = e.target.closest('[data-del]');
+  if(d){ const p=d.dataset.del; const n=store['count.'+p]||1; if(n>1){ store['count.'+p]=n-1; save(); render(); } return; }
+});
+
+function fmt(v, want){ if(isAsk(v)) return '[ НЕ ЗНАЄ — УТОЧНИТИ ]'; if(v==null||v==='') return want?'[ ПОРОЖНЬО — бажано заповнити ]':'[ ПОРОЖНЬО ]'; return Array.isArray(v)?(v.length?v.join('; '):'[ ПОРОЖНЬО ]'):v; }
+function collect(){
+  const miss = missing();
+  let out = document.title + '\n' + '='.repeat(64) + '\n';
+  out += 'Дата вивантаження: ' + new Date().toLocaleString(LANG==='ru'?'ru-RU':'uk-UA') + '\n';
+  const ask = [];
+  out += miss.length===0
+    ? 'СТАТУС: усі обов’язкові пункти заповнені.\n'
+    : ('СТАТУС: НЕ ЗАПОВНЕНО ОБОВ’ЯЗКОВИХ ПУНКТІВ - ' + miss.length + '\n\nСПИСОК ПРОПУСКІВ:\n' +
+       miss.map(m=>'  ! ' + m.part + ' | пункт ' + (m.n||'-') + ' | ' + m.q).join('\n') + '\n');
+  if(ask.length) out += '\nНЕ ЗНАЄ ВІДПОВІДЬ (' + ask.length + ') - УТОЧНИТИ:\n' +
+       ask.map(m=>'  ? ' + m.part + ' | пункт ' + (m.n||'-') + ' | ' + m.q).join('\n') + '\n';
+  out += '='.repeat(64) + '\n';
+  SPEC.forEach((p,pi)=>{
+    out += '\n' + p.part + '\n' + '-'.repeat(64) + '\n';
+    p.items.forEach(it=>{
+      const path='p'+pi+'.'+it.k;
+      if(it.t==='group'){
+        if(it.none && store['none.'+path]===true){ out += '\n' + (it.n?it.n+' ':'') + it.q + ': ' + it.none + '\n'; return; }
+        const n = Math.max(1, store['count.'+path]||it.min||1);
+        out += '\n' + (it.n?it.n+' ':'') + it.q + '\n';
+        for(let i=0;i<n;i++){
+          out += '  -- ' + it.item + ' ' + (i+1) + '\n';
+          it.f.forEach(f=>{
+            const v=store[path+'.'+i+'.'+f.k];
+            const mark = (f.req && empty(v)) ? '  <<< ПРОПУЩЕНО, ОБОВ’ЯЗКОВЕ' : (isAsk(v) ? '  <<< УТОЧНИТИ' : '');
+            out += '     ' + (itemNum(it,i,f)?itemNum(it,i,f)+' ':'') + f.q + ': ' + fmt(v,f.want) + mark + '\n';
+          });
+        }
+      } else {
+        const v = store[path];
+        const mark = (it.req && empty(v)) ? '  <<< ПРОПУЩЕНО, ОБОВ’ЯЗКОВЕ' : (isAsk(v) ? '  <<< УТОЧНИТИ' : '');
+        out += (it.n?it.n+' ':'') + it.q + ': ' + fmt(v,it.want) + mark + '\n';
+      }
+    });
+  });
+  return out;
+}
+
+
+function pick(re){
+  const ks = Object.keys(store);
+  for(const k of ks){ if(re.test(k) && store[k] && store[k]!==ASK) return String(store[k]).trim(); }
+  return '';
+}
+function clientName(){
+  const nm = pick(/\.name$/);
+  if(nm) return nm;
+  const ln = pick(/\.b1a$/) || pick(/\.n1a$/) || pick(/\.f1a$/);
+  const fn = pick(/\.b1b$/) || pick(/\.n1b$/) || pick(/\.f1b$/);
+  return [ln, fn].filter(Boolean).join(' ');
+}
+function cssv(n){ return getComputedStyle(document.documentElement).getPropertyValue(n).trim().replace('#',''); }
+const COL={ok:'1D7A43',miss:'C00000',ask:'E07B12',want:'A8560A',dim:'9AA2AA'};
+function cellState(v,req,want){
+  if(isAsk(v)) return {t:'НЕ ЗНАЮ — УТОЧНИТИ', c:COL.ask, b:1};
+  if(empty(v)){
+    if(req) return {t:(LANG==='ru'?'НЕ ЗАПОЛНЕНО':'НЕ ЗАПОВНЕНО'), c:COL.miss, b:1};
+    if(want) return {t:'порожньо (бажано)', c:COL.want, b:0};
+    return {t:'—', c:COL.dim, b:0};
+  }
+  return {t:(Array.isArray(v)?v.join('; '):v), c:COL.ok, b:1};
+}
+function walk(){
+  const out=[];
+  SPEC.forEach((p,pi)=>{
+    out.push({k:'part', title:p.part});
+    p.items.forEach(it=>{
+      if(it.k==='quest' || it.k==='add') return;
+      const path='p'+pi+'.'+it.k;
+      if(it.t==='group'){
+        if(it.none && store['none.'+path]===true){ out.push({k:'row', n:it.n||'', q:it.q, s:{t:it.none,c:COL.dim,b:0}}); return; }
+        const n = Math.max(1, store['count.'+path]||it.min||1);
+        for(let i=0;i<n;i++){
+          out.push({k:'sub', title:it.item+' '+(i+1)});
+          it.f.forEach(f=>out.push({k:'row', n:itemNum(it,i,f), q:f.q, s:cellState(store[path+'.'+i+'.'+f.k], f.req, f.want)}));
+        }
+      } else {
+        out.push({k:'row', n:it.n||'', q:it.q, s:cellState(store[path], it.req, it.want)});
+      }
+    });
+  });
+  return out;
+}
+function comments(){
+  let out=[];
+  SPEC.forEach((p,pi)=>p.items.forEach(it=>{
+    if(it.k==='quest' || it.k==='add'){ const v=store['p'+pi+'.'+it.k]; if(v && v!==ASK) out.push({q:it.q, v:v}); }
+  }));
+  return out;
+}
+function reportDocx(){
+  const miss = missing(), ask = [], name = clientName();
+  const P=DOCX.p, R=DOCX.runs, TC=DOCX.tc, TR=DOCX.tr, TBL=DOCX.table;
+  const ACC = cssv('--acc')||'2F5596', ACCD = cssv('--accd')||'1F3864', SOFT = cssv('--soft')||'EEF3FA';
+  let b = '';
+  b += P(R(document.title,{b:1,sz:38,color:'FFFFFF'}),{shd:ACCD});
+  b += P(R(LANG==='ru'?'Участница: ':'Учасниця: ',{color:'FFFFFF'})+R(name||'—',{b:1,color:'FFFFFF'})+R('     '+new Date().toLocaleString(LANG==='ru'?'ru-RU':'uk-UA'),{color:'FFFFFF'}),{shd:ACCD});
+  b += P(R(''));
+  b += P((miss.length===0 ? R(LANG==='ru'?'Заполнено полностью':'Заповнено повністю',{b:1,color:COL.ok}) : R((LANG==='ru'?'Не заполнено: ':'Не заповнено: ')+miss.length,{b:1,color:COL.miss}))
+        + (ask.length ? R('        Не знає відповідь: '+ask.length,{b:1,color:COL.ask}) : ''));
+  b += P(R(LANG==='ru' ? 'Зелёный — ответ есть.  Красный — обязательный пункт не заполнен.'
+              : 'Зелений — відповідь є.  Червоний — обов’язковий пункт не заповнено.',{color:'6B7480',sz:22}));
+  let rows=[];
+  let first=true;
+  walk().forEach(x=>{
+    if(x.k==='part'){
+      rows.push(TR([TC(x.title,{b:1,sz:26,color:ACCD,shd:SOFT,span:3,btop:(first?null:ACCD)},10080)]));
+      first=false;
+    }
+    else if(x.k==='sub'){ rows.push(TR([TC('',{shd:SOFT},740),TC(x.title,{b:1,color:ACCD,shd:SOFT},5540),TC('',{shd:SOFT},3800)])); }
+    else rows.push(TR([TC(x.n,{b:1,color:ACC,sz:22},740), TC(x.q,{color:'3B444E',sz:24},5540), TC(x.s.t,{b:x.s.b,color:x.s.c,sz:24},3800)]));
+  });
+  if(rows.length) b += TBL(rows);
+  const cm = comments();
+  b += P(R(LANG==='ru'?'Комментарии и вопросы':'Коментарі та питання',{b:1,sz:30,color:ACCD}),{shd:SOFT,space:300});
+  if(cm.length) cm.forEach(c=>{ b += P(R(c.q+':',{b:1,color:ACCD})) + P(R(c.v)); });
+  else b += P(R('Питань не залишено.',{color:COL.dim}));
+  b += P(R(''));
+  b += P(R(LANG==='ru'?'Анкету заполнила: ':'Анкету заповнила: ',{color:'6B7480',sz:24})+R(name||'—',{b:1,color:'6B7480',sz:24})
+       + R('   ·   ТІЛО КЛАБ   ·   '+new Date().toLocaleString(LANG==='ru'?'ru-RU':'uk-UA'),{color:'6B7480',sz:24}));
+  b += P(R('CLAUDE_DATA:'+JSON.stringify({form:window.FORM_KEY, saved:new Date().toISOString(), answers:store}),{color:'FFFFFF',sz:2}));
+  return DOCX.build(b);
+}
+function reportHTML(){
+  const miss=missing(), ask=[], name=clientName();
+  const ACC='#'+(cssv('--acc')||'2F5596'), ACCD='#'+(cssv('--accd')||'1F3864'), SOFT='#'+(cssv('--soft')||'EEF3FA');
+  let body='';
+  walk().forEach(x=>{
+    if(x.k==='part') body += '<h2>'+esc(x.title)+'</h2>';
+    else if(x.k==='sub') body += '<div class="sub">'+esc(x.title)+'</div>';
+    else body += '<div class="r"><div class="rn">'+esc(x.n)+'</div><div class="rq">'+esc(x.q)+'</div><div class="ra" style="color:#'+x.s.c+';font-weight:'+(x.s.b?700:400)+'">'+esc(x.s.t)+'</div></div>';
+  });
+  const cm=comments();
+  body += '<h2>Коментарі та питання</h2><div class="cm">'
+    + (cm.length ? cm.map(c=>'<p><b>'+esc(c.q)+':</b><br>'+esc(c.v).replace(/\n/g,'<br>')+'</p>').join('') : '<p style="color:#9aa2aa">Питань немає.</p>')
+    + '</div>';
+  return '<!doctype html><html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Перевірка відповідей — '+esc(document.title)+'</title>'
+   + '<style>body{margin:0;background:#f6f7f9;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#16212e}'
+   + 'header{background:'+ACCD+';color:#fff;padding:18px 20px}header h1{margin:0 0 4px;font-size:19px}header p{margin:0;font-size:13.5px;opacity:.9}'
+   + '.w{max-width:900px;margin:0 auto;padding:0 16px 50px}.w h2{background:'+SOFT+';color:'+ACCD+';font-size:15px;padding:9px 14px;margin:18px 0 0;border-radius:8px 8px 0 0;border-bottom:2px solid '+ACC+'}'
+   + '.r{display:flex;gap:10px;padding:6px 14px;background:#fff;border-bottom:1px solid #f0f2f4}'
+   + '.rn{flex:0 0 58px;color:'+ACC+';font-weight:700;font-size:12.5px}.rq{flex:1;color:#3b444e}.ra{flex:0 0 34%}'
+   + '.sub{background:'+SOFT+';padding:6px 14px;font-weight:700;color:'+ACCD+'}'
+   + '.cm{background:#fff;padding:10px 14px}.chip{display:inline-block;border-radius:20px;padding:4px 12px;font-weight:700;font-size:13px;margin:12px 6px 0 0}'
+   + '@media(max-width:700px){.r{flex-wrap:wrap}.ra{flex:1 1 100%}}</style></head><body>'
+   + '<header><h1>'+esc(document.title)+'</h1><p>'+esc(name||'ім’я не вказано')+' · '+new Date().toLocaleString(LANG==='ru'?'ru-RU':'uk-UA')+'</p></header><div class="w">'
+   + (miss.length ? '<span class="chip" style="background:#fdecec;color:#c00000">Не заполнено: '+miss.length+'</span>' : '<span class="chip" style="background:#e7f5ec;color:#1d7a43">Заполнено полностью</span>')
+   + (ask.length ? '<span class="chip" style="background:#fff4e3;color:#a8560a">Не знаю ответ: '+ask.length+'</span>' : '')
+   + body + '</div></body></html>';
+}
+const TRMAP={'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'e','ж':'zh','з':'z','и':'i','й':'y','к':'k','л':'l','м':'m','н':'n','о':'o','п':'p','р':'r','с':'s','т':'t','у':'u','ф':'f','х':'kh','ц':'ts','ч':'ch','ш':'sh','щ':'shch','ъ':'','ы':'y','ь':'','э':'e','ю':'yu','я':'ya','і':'i','ї':'yi','є':'ie','ґ':'g'};
+function translit(s){
+  return String(s).split('').map(ch=>{
+    const low = ch.toLowerCase();
+    if(TRMAP[low] !== undefined){ const t = TRMAP[low]; return ch===low ? t : (t.charAt(0).toUpperCase()+t.slice(1)); }
+    return ch;
+  }).join('');
+}
+function fileBase(){
+  const n = translit(clientName()).replace(/[^A-Za-z0-9_-]+/g,'_').replace(/^_+|_+$/g,'');
+  return 'Anketa_TILO_KLAB' + (n?('_'+n):'');
+}
+
+function modal(o){
+  return new Promise(res=>{
+    const veil = document.getElementById('veil');
+    const box = veil.querySelector('.box');
+    box.className = 'box wide';
+    box.innerHTML =
+      (o.icon ? '<div class="mi '+(o.tone||'')+'">'+o.icon+'</div>' : '')
+      + (o.title ? '<div class="mt '+(o.tone||'')+'">'+o.title+'</div>' : '')
+      + '<div class="ml">' + (o.lines||[]).map(l=>'<p>'+l+'</p>').join('') + '</div>'
+      + '<div class="mb">' + (o.buttons||[{label:'Понятно',primary:1}]).map((b,i)=>
+          '<button data-i="'+i+'" class="'+(b.primary?'mp':'ms')+'">'+b.label+'</button>').join('') + '</div>';
+    veil.classList.add('on');
+    box.querySelectorAll('.mb button').forEach(btn=>{
+      btn.onclick = ()=>{ veil.classList.remove('on'); box.className='box'; res(Number(btn.dataset.i)); };
+    });
+  });
+}
+function __boot(){
+  const sw = document.getElementById('lang');
+  if(sw){
+    sw.innerHTML = ['uk','ru'].map(c=>`<button type="button" data-lang="${c}" class="${LANG===c?'on':''}">${c==='uk'?'Українська':'Русский'}</button>`).join('');
+    sw.addEventListener('click', e=>{
+      const b = e.target.closest('[data-lang]'); if(!b) return;
+      LANG = b.dataset.lang;
+      try { localStorage.setItem(KEY+'_lang', LANG); } catch(err){}
+      sw.querySelectorAll('button').forEach(x=>x.classList.toggle('on', x.dataset.lang===LANG));
+      applyUI(); render();
+    });
+  }
+  applyUI();
+  render();
+  const sndBtn = document.getElementById('snd');
+  const veil = document.getElementById('veil');
+  const boxHTML = '<div class="spin"></div><div class="txt">Готовим файл…</div>';
+  function showVeil(t){ const b=veil.querySelector('.box'); b.className='box'; b.innerHTML = boxHTML; if(t) b.querySelector('.txt').textContent = t; veil.classList.add('on'); }
+  function hideVeil(){ veil.classList.remove('on'); }
+  function lock(on){ sndBtn.disabled = on; sndBtn.title = on ? 'Сначала нажмите «Я всё заполнил(а) — проверить»' : ''; }
+  lock(true);
+
+  function applyUI(){
+    const ck=document.getElementById('ck'), sn=document.getElementById('snd'), sv=document.getElementById('saved');
+    if(ck) ck.textContent=T('check');
+    if(sn) sn.textContent=T('send');
+    if(sv) sv.textContent=T('saved');
+    updateBar();
+  }
+  document.getElementById('ck').onclick = async ()=>{
+    showGaps = true; render(); lock(false);
+    const m = missing(), a = [];
+    if(m.length===0){
+      sndBtn.classList.add('ready');
+      await modal({
+        icon:'✓', tone:'ok', title:T('done'),
+        lines: [T('doneTxt')]
+          
+          .concat([T('nowSend')]),
+        buttons:[{label:T('ok'), primary:1}]
+      });
+    } else {
+      sndBtn.classList.remove('ready');
+      await modal({
+        icon:'!', tone:'warn', title:T('leftTitle')+m.length,
+        lines: [T('leftTxt'),
+                ],
+        buttons:[{label:T('back'), primary:1}]
+      });
+      const first = document.querySelector('.field.gap');
+      if(first) first.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  };
+
+  sndBtn.onclick = async ()=>{
+    const m = missing(), a = [];
+    if(m.length){
+      const r = await modal({
+        icon:'!', tone:'warn', title:T('notAll'),
+        lines: [T('notAllTxt')+'<b>'+m.length+'</b>.',
+                LANG==='ru' ? 'Можно отправить как есть, а можно вернуться и дозаполнить.' : 'Можна відправити як є, а можна повернутись і дозаповнити.'],
+        buttons:[{label:T('backShort'), primary:1}, {label:T('asIs')}]
+      });
+      if(r===0){ showGaps=true; render(); return; }
+    }
+    showVeil('Готовим файл…');
+    await new Promise(r=>setTimeout(r,60));
+    let blob, file;
+    const fname = fileBase()+'.docx';
+    try{
+      blob = reportDocx();
+      file = new File([blob], fname, {type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+    }catch(err){
+      hideVeil();
+      await modal({icon:'!', tone:'warn', title:T('failTitle'), lines:[T('failTxt')]});
+      return;
+    }
+    if(navigator.canShare && navigator.canShare({files:[file]})){
+      hideVeil();
+      try{
+        await navigator.share({files:[file]});
+        await modal({icon:'✓', tone:'ok', title:T('sentTitle'), lines:[T('sentTxt')], buttons:[{label:T('close'), primary:1}]});
+        return;
+      }catch(err){
+        hideVeil();
+        if(err && err.name==='AbortError') return;
+      }
+    }
+    let savedOk = false;
+    try{
+      if(window.claude && claude.use){
+        const dl = await claude.use('downloads');
+        if(dl){ await dl.save({filename:fname, data:new Uint8Array(await blob.arrayBuffer())}); savedOk = true; }
+      }
+    }catch(e){}
+    if(!savedOk){
+      const lnk=document.createElement('a'); lnk.href=URL.createObjectURL(blob);
+      lnk.download = fname; lnk.click();
+    }
+    hideVeil();
+    await modal({
+      icon:'✓', tone:'ok', title:T('savedTitle'),
+      lines:['<span class="fname">'+esc(fname)+'</span>',
+             T('savedTxt1'),
+             T('savedTxt2')],
+      buttons:[{label:T('openTg'), primary:1}, {label:T('close')}]
+    }).then(r=>{ if(r===0) window.open('https://t.me/','_blank','noopener'); });
+  };
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', __boot);
+} else {
+  __boot();
+}
+})();
+</script>
+</body></html>
