@@ -1,0 +1,845 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>I-129 L-1A - Petition for a Nonimmigrant Worker</title>
+<style>:root{--bg:linear-gradient(180deg,#f5f3fa 0%,#fcfbfe 45%,#f4f2f9 100%) fixed;--ink:#1d1829;--hd:linear-gradient(135deg,#2a1f45 0%,#47336f 40%,#8670b3 100%);--acc:#5a4490;--accd:#3b2b63;--soft:#f0edf7;--soft2:#faf9fd;--line:#dfd8ec;--ring:rgba(90,68,144,.18)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 60px}
+header{background:var(--hd);color:#fff;padding:24px 20px 22px}
+header .in{max-width:860px;margin:0 auto}
+header .tag{font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.8}
+header h1{margin:8px 0 6px;font-size:27px;line-height:1.2;font-weight:700}
+header p{margin:0;opacity:.9;font-size:15px}
+header{padding-bottom:16px}
+.alert.up{margin-top:14px}
+.alert{background:#fff4f4;border:1px solid #f0c9c9;border-left:5px solid #d0021b;border-radius:10px;padding:13px 16px;margin:20px 0 0;font-size:14.5px;line-height:1.45}
+.alert b{color:#b3021a}
+.alert .badge{display:inline-block;background:var(--acc);color:#fff;border-radius:20px;padding:1px 11px;font-size:14px;font-weight:700;vertical-align:baseline}
+.alert .big{display:block;font-size:16px;line-height:1.5;letter-spacing:.01em}
+.intro{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:20px 0;font-size:14px;line-height:1.45}
+.intro b{color:var(--accd)}
+.intro ul{margin:10px 0 0;padding-left:20px}
+.intro li{margin:2px 0}
+.part{margin:34px 0 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.part+.part{margin-top:38px;position:relative}
+.part+.part::before{content:'';position:absolute;left:12%;right:12%;top:-20px;height:2px;background:linear-gradient(90deg,transparent,var(--acc),transparent);opacity:.35}
+.part h2{margin:0;background:var(--soft);color:var(--accd);font-size:16px;padding:12px 18px;border-bottom:2px solid var(--acc)}
+.pnote{padding:10px 18px 0;font-size:13px;line-height:1.4;color:#555}
+.field{padding:9px 18px;border-bottom:1px solid #f0f0f0}
+.field:last-child{border-bottom:0}
+.lbl{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.num{flex:0 0 auto;min-width:44px;font-weight:700;color:var(--acc);font-size:13px;font-variant-numeric:tabular-nums}
+.txt{flex:1 1 240px;font-weight:600}
+.req{font-size:11px;background:var(--acc);color:#fff;border-radius:20px;padding:2px 9px}
+.rec-tag{font-size:11px;background:#fff6e5;color:#8a5a00;border:1px solid #f0d9a8;border-radius:20px;padding:1px 9px;white-space:nowrap}
+.opt-rec{border-color:var(--acc);background:var(--soft);box-shadow:0 0 0 2px var(--ring)}
+.pick{display:block;font-size:12px;color:var(--accd);font-weight:700;margin-top:2px}
+.askbtn{margin:6px 0 0 52px;background:#fff;border:1px dashed #b9c0c8;color:#5b6470;border-radius:7px;padding:4px 11px;font:inherit;font-size:12.5px;cursor:pointer}
+.askbtn:hover{border-color:var(--acc);color:var(--accd)}
+.askbtn.on{background:#fff8e6;border:1px solid #e8c56a;color:#8a5a00;font-weight:600}
+.field.asked{background:#fffdf5}
+.askmsg{margin:5px 0 0 52px;font-size:12.5px;line-height:1.35;color:#8a5a00;background:#fff6e2;border-radius:6px;padding:5px 10px}
+.field.gap{background:#fff5f5;box-shadow:inset 4px 0 0 #d0021b}
+.gapmsg{margin:5px 0 0 52px;font-size:12.5px;line-height:1.35;color:#b3021a;background:#ffe9e9;border-radius:6px;padding:5px 10px;font-weight:600}
+.field.gap input[type=text],.field.gap textarea{border-color:#d0021b;background:#fffafa}
+.field.gap .opt{border-color:#e9a9a9}
+#cnt{font-size:13px;font-weight:700;margin-right:4px}
+#cnt.ok{color:#1d7a43}
+#cnt.bad{color:#b3021a}
+.bar button#ck{background:var(--soft);border-color:var(--acc)}
+.star{color:#d0021b;font-weight:700;margin-left:4px}
+.law-tag{font-size:11px;background:#fff4e3;color:#a8560a;border:1px dashed #e0a86a;border-radius:20px;padding:1px 9px;white-space:nowrap;font-weight:600}
+.want-tag{font-size:11px;background:#fff4e3;color:#a8560a;border:1px solid #f0c99a;border-radius:20px;padding:1px 9px;white-space:nowrap;font-weight:600}
+.star.want{color:#e07b12}
+.opt-tag{font-size:11px;background:#fff;color:#8a939c;border:1px solid #dde2e7;border-radius:20px;padding:1px 9px;white-space:nowrap}
+.hint{margin:3px 0 0 52px;font-size:12.5px;line-height:1.35;color:#5b6470;background:var(--soft);border-left:3px solid var(--acc);padding:5px 10px;border-radius:0 8px 8px 0}
+input[type=text],textarea{width:calc(100% - 52px);margin:5px 0 0 52px;padding:6px 10px;border:1px solid #ccd2d8;border-radius:8px;font:inherit;background:#fff}
+input[type=text]:focus,textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px var(--ring)}
+.opts{margin:5px 0 0 52px;display:flex;gap:7px;flex-wrap:wrap}
+.opts.col{flex-direction:column;gap:4px}
+.opt{display:flex;gap:7px;align-items:flex-start;border:1px solid #ccd2d8;border-radius:7px;padding:5px 10px;cursor:pointer;background:#fff}
+.opt:hover{border-color:var(--acc)}
+.opt input{margin:2px 0 0;accent-color:var(--acc)}
+.group{padding:12px 18px;border-bottom:1px solid #f0f0f0;background:var(--soft2)}
+.glbl{display:flex;gap:10px;align-items:baseline}
+.nonebox{display:flex;gap:8px;align-items:center;margin:6px 0 0 52px;padding:6px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:14px;font-weight:600;color:var(--accd);cursor:pointer;width:fit-content}
+.nonebox input{accent-color:var(--acc)}
+.cards{margin:6px 0 0 52px}
+.card{border:1px solid var(--line);border-radius:9px;margin:0 0 7px;background:var(--soft2)}
+.card .field{padding:7px 12px}
+.card input[type=text],.card textarea,.card .opts,.card .hint{margin-left:0;width:100%}
+.cardhd{display:flex;justify-content:space-between;align-items:center;padding:6px 12px;font-weight:700;color:var(--accd);font-size:14px;border-bottom:1px solid var(--line)}
+.add{margin:3px 0 0 52px;background:var(--acc);color:#fff;border:0;border-radius:7px;padding:6px 13px;font:inherit;font-weight:600;cursor:pointer}
+.add:hover{background:var(--accd)}
+.del{background:none;border:0;color:#a33;cursor:pointer;font:inherit;font-size:13px;text-decoration:underline}
+.bar{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line);padding:9px 18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:flex-end;z-index:5}
+.bar button{border:1px solid var(--acc);background:#fff;color:var(--accd);border-radius:7px;padding:7px 14px;font:inherit;font-weight:600;cursor:pointer}
+.bar button#ck{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:700}
+.bar button#ck:hover{background:var(--accd);border-color:var(--accd)}
+.bar button#snd{background:#fff;color:var(--accd);border-color:var(--acc);font-size:16px;padding:10px 24px;font-weight:700}
+.bar button#snd.ready{background:#1d7a43;border-color:#1d7a43;color:#fff}
+.bar button:disabled{background:#f2f4f6;border-color:#e2e6ea;color:#a8b0b8;cursor:not-allowed}
+.bar button#ck{font-weight:700}
+.bar .sp{flex:1}
+#saved{font-size:13px;color:#2c8a4a;opacity:0;transition:.2s}
+#saved.on{opacity:1}
+@media print{.bar,.add,.del{display:none}body{background:#fff}}
+@media(max-width:600px){
+ .gapmsg,.askmsg,.askbtn,.nonebox{margin-left:0}
+ .hint,input[type=text],textarea,.opts,.cards,.add{margin-left:0;width:100%}
+ .num{min-width:auto}
+}
+
+#veil{position:fixed;inset:0;background:rgba(20,26,33,.55);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;z-index:50}
+#veil.on{display:flex}
+#veil .box{background:#fff;border-radius:18px;padding:26px 30px;text-align:center;box-shadow:0 18px 50px rgba(0,0,0,.3);min-width:230px;max-width:min(440px,90vw)}
+#veil .box.wide{padding:28px 30px 22px;text-align:left}
+#veil .mi{width:46px;height:46px;border-radius:50%;font-size:26px;line-height:46px;text-align:center;font-weight:700;margin:0 auto 12px}
+#veil .mi.ok{background:#e7f5ec;color:#1d7a43}
+#veil .mi.warn{background:#fdecec;color:#c00000}
+#veil .mt{font-size:19px;font-weight:800;text-align:center;margin-bottom:12px;color:var(--accd)}
+#veil .mt.ok{color:#1d7a43}
+#veil .mt.warn{color:#c00000}
+#veil .ml p{margin:0 0 10px;font-size:14.5px;line-height:1.5;color:#3b444e}
+#veil .ml .fname{display:block;background:#f4f6f8;border-radius:8px;padding:7px 11px;font-size:13px;color:#5b6470;word-break:break-all}
+#veil .mb{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+#veil .mb button{border-radius:10px;padding:10px 20px;font:inherit;font-size:14.5px;font-weight:700;cursor:pointer;border:1px solid var(--acc)}
+#veil .mb .mp{background:var(--acc);color:#fff}
+#veil .mb .mp:hover{background:var(--accd);border-color:var(--accd)}
+#veil .mb .ms{background:#fff;color:#5b6470;border-color:#ccd2d8}
+#veil .spin{width:34px;height:34px;margin:0 auto 14px;border:3px solid var(--soft);border-top-color:var(--acc);border-radius:50%;animation:sp .8s linear infinite}
+#veil .txt{font-weight:700;color:var(--accd);font-size:15px}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+#veil .done{font-size:17px;font-weight:800;color:#1d7a43;margin-bottom:6px}
+#veil .fname{font-size:13px;color:#5b6470;word-break:break-all;background:#f4f6f8;border-radius:8px;padding:6px 10px;margin-bottom:12px}
+#veil .steps{font-size:14px;line-height:1.45;color:#3b444e;margin-bottom:16px;max-width:320px}
+#veil .btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+#veil .tg{background:var(--acc);color:#fff;text-decoration:none;border-radius:9px;padding:9px 18px;font-weight:700;font-size:14px}
+#veil .cls{background:#fff;border:1px solid #ccd2d8;border-radius:9px;padding:9px 18px;font:inherit;font-size:14px;cursor:pointer}
+
+.bar .ver{font-size:11.5px;color:#aab1b8;margin-right:10px}
+
+#veil .check{width:52px;height:52px;margin:0 auto 12px;border-radius:50%;background:#1d7a43;color:#fff;font-size:30px;line-height:52px;font-weight:700}
+
+header .who{margin:14px 0 0;font-size:17px;font-weight:700;letter-spacing:.02em;background:#fff;color:#c00000;display:inline-block;padding:8px 20px;border-radius:24px;box-shadow:0 3px 12px rgba(0,0,0,.18)}
+header .who b{color:#c00000;font-size:19px;letter-spacing:.03em}
+.bar .rst{font-size:11.5px;color:#b9c0c8;text-decoration:underline;margin-right:12px}
+.bar .rst:hover{color:#8a939c}
+
+.copybox{margin:0;padding:10px 18px;border-bottom:1px solid #f0f0f0;background:var(--soft2)}
+.copybox.on{background:var(--soft)}
+.copybox label{display:flex;gap:9px;align-items:center;font-weight:700;color:var(--accd);cursor:pointer;font-size:14.5px}
+.copybox input{accent-color:var(--acc);width:16px;height:16px}
+.copybox .hint{margin-left:25px}
+
+.notice{margin:8px 0 0 52px;background:#fff3f3;border:1px solid #f0c9c9;border-left:5px solid #d0021b;border-radius:0 10px 10px 0;padding:11px 14px;font-size:14.5px;line-height:1.5;color:#7a1620}
+.notice b{color:#b3021a}
+.notice .cap{display:block;font-weight:800;letter-spacing:.01em;color:#b3021a;margin-bottom:4px}
+@media(max-width:600px){.notice{margin-left:0}}
+
+input[type=text].short{width:150px;min-width:150px}
+@media(max-width:600px){input[type=text].short{width:60%}}
+</style></head>
+<body>
+<header><div class="in">
+<div class="tag">USCIS I-129</div>
+<h1>Анкета для формы I-129 и приложения L</h1>
+<p>Петиция американской компании на визу L-1A (перевод руководителя из иностранной компании)</p>
+
+</div></header>
+<div class="wrap">
+<div class="alert up"><b class="big">В АНКЕТЕ ТРИ БЛОКА ДАННЫХ: АМЕРИКАНСКАЯ КОМПАНИЯ, ИНОСТРАННАЯ КОМПАНИЯ И ВЫ.</b><br><br><b>Пожалуйста, заполните все <span class="badge">обязательные</span> пункты.</b><br>Это требование Иммиграционной службы США: при неполном заполнении заявление может быть отклонено.</div>
+<div class="intro">
+<b>Как заполнять</b>
+<ul>
+<li>Имена, города и адреса — <b>латиницей, точно как в загранпаспорте</b>: Ivanov Ivan, Kyiv, Los Angeles.</li>
+<li>Даты — в американском формате <b>мм/дд/гггг</b>: 14 июня 1990 года это 06/14/1990.</li>
+<li>Пункты со <b style="color:#d0021b">*</b> нужно заполнить обязательно. Если пункт не про Вас или у Вас такого нет — напишите <b>«нет»</b>. Пометка <b>если применимо</b> — заполните, только если это про Вас.</li>
+<li>Не знаете ответ — не переживайте: нажмите <b>«Я всё заполнил(а) — проверить»</b>, и прямо под этим пунктом появится кнопка <b>«Не знаю ответ»</b>. Отметьте её — пункт станет жёлтым, и мы найдём ответ вместе. Отдельно в конце ничего писать не нужно.</li>
+<li>Кнопка <b>+ Добавить</b> нужна, когда людей, адресов или мест работы несколько.</li>
+<li>Что-то непонятно — напишите вопрос в самом конце анкеты и укажите, по какой Части и по какому номеру пункта. Мы посмотрим и ответим.</li>
+<li>Ответы сохраняются сами — можно закрыть страницу и вернуться позже.</li>
+<li><b>Когда закончите:</b> нажмите <b>«Я всё заполнил(а) — проверить»</b>. Все пропущенные пункты подсветятся красным — вернитесь и заполните их. Когда пропусков не останется, нажмите <b>«Отправить»</b> и выберите <b>Telegram</b>.</li>
+</ul>
+</div>
+<div id="form"></div>
+</div>
+<div id="veil"><div class="box"><div class="spin"></div><div class="txt">Готовим файл…</div></div></div>
+<div class="bar">
+<span class="ver">версия 24.11 14:18</span><span id="saved">сохранено</span><span class="sp"></span>
+<span id="cnt"></span>
+<button id="ck">Я всё заполнил(а) — проверить</button>
+<button id="snd">Отправить</button>
+</div>
+<script>window.FORM_KEY="i129";</script>
+<script>const SPEC = [
+{part:"Часть 1. Американская компания (Petitioner)", note:"Петицию L-1A подаёт американская компания. Здесь её данные: так, как они записаны в регистрационных документах и в налоговой (IRS).", items:[
+ {k:"c2", n:"2.", q:"Полное юридическое название американской компании", req:1, hint:"Точно как в свидетельстве о регистрации, вместе с LLC, Inc. или Corp."},
+ {k:"c3a", n:"3.", q:"Почтовый адрес компании: на чьё имя приходит почта (In Care Of)", hint:"Если почта приходит на саму компанию, оставьте пустым."},
+ {k:"c3b", n:"3.", q:"Номер дома и улица", req:1},
+ {k:"c3c", n:"3.", q:"Офис, этаж или квартира", hint:"Например: Suite 200."},
+ {k:"c3d", n:"3.", q:"Город", req:1},
+ {k:"c3e", n:"3.", q:"Штат (2 буквы)", req:1, hint:"Например: CA, NY, FL."},
+ {k:"c3f", n:"3.", q:"ZIP Code", req:1},
+ {k:"c4a", n:"4.", q:"Рабочий телефон компании", req:1, hint:"10 цифр, например 3105551234."},
+ {k:"c4b", n:"4.", q:"Мобильный телефон контактного лица"},
+ {k:"c4c", n:"4.", q:"Email компании", req:1},
+ {k:"c5", n:"5.", q:"EIN компании (Federal Employer Identification Number)", req:1, hint:"9 цифр. Есть в письме IRS о присвоении EIN (CP 575) и в налоговой декларации компании."},
+ {k:"c6", n:"6.", q:"Компания некоммерческая с налоговым освобождением или государственная научная организация?", t:"yn", req:1, recOpt:["Нет"], pickNote:"Ваш ответ, если это обычная коммерческая компания"}
+]},
+
+{part:"Часть 2. О петиции", note:"Классификацию L-1A и число работников (один человек) мы впишем сами.", items:[
+ {k:"p2", n:"2.", q:"Основание петиции", t:"radio", req:1, recOpt:["New employment — новая работа в американской компании"], pickNote:"Ваш вариант, если это первая петиция L-1A на Вас от этой компании", o:[
+  "New employment — новая работа в американской компании",
+  "Continuation — продление той же работы без изменений",
+  "Change of employer — переход от другого работодателя",
+  "Amended petition — изменение уже одобренной петиции"]},
+ {k:"p3", n:"3.", q:"Номер последней квитанции USCIS на Ваше имя (Receipt Number)", req:1, hint:"Формат: 3 буквы и 10 цифр, например WAC2590012345. Если USCIS раньше по Вам ничего не рассматривал, напишите None."},
+ {k:"p4", n:"4.", q:"Где Вы будете получать статус L-1A", t:"radio", req:1, recOpt:["a. Я за пределами США: получу визу L-1A в посольстве или консульстве США"], pickNote:"Ваш вариант, если Вы сейчас за пределами США", o:[
+  "a. Я за пределами США: получу визу L-1A в посольстве или консульстве США",
+  "b. Я сейчас в США в другом статусе и хочу сменить его на L-1A, не выезжая",
+  "c. Я уже в статусе L-1A и нужно продление"], hint:"Если сейчас Вы в США как парольщик (U4U), по ESTA или по визе C или D, выбирайте вариант a: смена статуса в этих случаях невозможна."}
+]},
+
+{part:"Часть 3. Ваши данные (Beneficiary)", note:"Бенефициар — это Вы, человек, которого компания переводит в США. Всё латиницей, как в загранпаспорте.", items:[
+ {k:"b3a", n:"3.", q:"Фамилия", req:1},
+ {k:"b3b", n:"3.", q:"Имя", req:1},
+ {k:"b3c", n:"3.", q:"Отчество", hint:"Если в загранпаспорте отчества нет, оставьте пустым."},
+ {k:"b4", n:"4.", q:"Другие имена и фамилии, которые Вы использовали", t:"group", item:"Другое имя", min:1,
+   none:"Других имён и фамилий у меня не было",
+   hint:"Девичья фамилия, фамилии из прошлых браков, другие варианты написания в старых паспортах.", f:[
+  {k:"ln", q:"Фамилия", req:1},
+  {k:"fn", q:"Имя", req:1},
+  {k:"mn", q:"Отчество"}]},
+ {k:"b5a", n:"5.", q:"Дата рождения", req:1, hint:"Формат мм/дд/гггг: 7 марта 1985 года это 03/07/1985."},
+ {k:"b5b", n:"5.", q:"Пол", t:"radio", req:1, o:["Female — женский","Male — мужской"]},
+ {k:"b5c", n:"5.", q:"Номер социального страхования США (SSN)", hint:"9 цифр. Если SSN Вам не выдавали, оставьте пустым."},
+ {k:"b5d", n:"5.", q:"A-Number", hint:"9 цифр, начинается с A. Есть в разрешении на работу (EAD), грин-карте или письмах USCIS. Если его нет, оставьте пустым."},
+ {k:"b5e", n:"5.", q:"Страна рождения", req:1, hint:"Как страна называется сейчас: Ukraine, Russia, Kazakhstan."},
+ {k:"b5f", n:"5.", q:"Область или провинция рождения"},
+ {k:"b5g", n:"5.", q:"Гражданство", req:1},
+ {k:"b6pn", n:"6.", q:"Номер загранпаспорта", req:1},
+ {k:"b6pi", n:"6.", q:"Дата выдачи загранпаспорта", req:1},
+ {k:"b6pe", n:"6.", q:"Дата окончания загранпаспорта", req:1},
+ {k:"b6pc", n:"6.", q:"Страна, которая выдала паспорт", req:1},
+ {k:"b6i94", n:"6.", q:"Номер I-94 (только если Вы сейчас в США)", hint:"11 символов. Скачать I-94 можно на сайте i94.cbp.dhs.gov (раздел Get Most Recent I-94)."},
+ {k:"b6arr", n:"6.", q:"Дата последнего въезда в США (если Вы сейчас в США)"},
+ {k:"b6st", n:"6.", q:"Ваш текущий статус в США (если Вы сейчас в США)", hint:"Например: B-2, F-1, H-1B, parole (U4U)."},
+ {k:"b6ste", n:"6.", q:"До какой даты действует статус (если Вы сейчас в США)", hint:"Указана в I-94. Если там D/S, так и напишите."},
+ {k:"b6sev", n:"6.", q:"Номер SEVIS (если когда-либо учились в США)"},
+ {k:"b6ead", n:"6.", q:"Номер разрешения на работу EAD (если есть)"},
+ {k:"b7a", n:"7.", q:"Адрес проживания в США: номер дома и улица (если Вы сейчас в США)"},
+ {k:"b7b", n:"7.", q:"Квартира"},
+ {k:"b7c", n:"7.", q:"Город"},
+ {k:"b7d", n:"7.", q:"Штат и ZIP Code"}
+]},
+
+{part:"Часть 4. Посольство и прежние петиции", items:[
+ {k:"q1b", n:"1.b.", q:"Город посольства или консульства США, где Вы будете получать визу", req:1, hint:"Обычно это посольство в стране, где Вы живёте или гражданином которой являетесь. Например: Baku, Warsaw, Krakow, Astana."},
+ {k:"q1c", n:"1.c.", q:"Страна этого посольства или консульства", req:1, hint:"Например: Azerbaijan, Poland, Kazakhstan."},
+ {k:"q1d", n:"1.d.", q:"Ваш адрес за пределами США: улица, дом, квартира", req:1, hint:"Адрес проживания в Вашей стране, латиницей."},
+ {k:"q1e", n:"1.d.", q:"Город, область, почтовый индекс", req:1},
+ {k:"q1f", n:"1.d.", q:"Страна", req:1},
+ {k:"q2", n:"2.", q:"У Вас действующий загранпаспорт?", t:"yn", req:1},
+ {k:"q6", n:"6.", q:"Вы когда-либо были в процессе депортации (removal proceedings) в США?", t:"yn", req:1},
+ {k:"q7", n:"7.", q:"Подавали ли когда-либо на Вас иммиграционную петицию на грин-карту (I-140, I-130 и т. п.)?", t:"yn", req:1},
+ {k:"q8a", n:"8.a.", q:"Был ли у Вас статус L-1 за последние 7 лет?", t:"yn", req:1},
+ {k:"q8b", n:"8.b.", q:"Отказывали ли Вам в статусе L-1 за последние 7 лет?", t:"yn", req:1},
+ {k:"q9", n:"9.", q:"Подавала ли эта американская компания на Вас раньше рабочую петицию (H-1B, L-1, O-1 и т. п.)?", t:"yn", req:1},
+ {k:"q11a", n:"11.a.", q:"Были ли Вы когда-либо в США по программе обмена J-1 или J-2?", t:"yn", req:1},
+ {k:"q11b", n:"11.b.", q:"Если да: даты пребывания в статусе J-1 или J-2 (с какого по какое число)"}
+]},
+
+{part:"Часть 5. Работа в США и данные компании", items:[
+ {k:"e1", n:"1.", q:"Название Вашей должности в американской компании (на английском)", req:1, hint:"Например: Head of Legal, General Counsel, Legal Director."},
+ {k:"e3", n:"3.", q:"Адрес, где Вы будете работать, если он отличается от адреса компании в Части 1", hint:"Если работаете по тому же адресу, оставьте пустым."},
+ {k:"e5", n:"5.", q:"Будете ли Вы работать в офисе другой компании (у клиента, не у своей компании)?", t:"yn", req:1},
+ {k:"e7", n:"7.", q:"Работа на полный день (full-time)?", t:"yn", req:1},
+ {k:"e8", n:"8.", q:"Если нет: сколько часов в неделю"},
+ {k:"e9a", n:"9.", q:"Ваша зарплата в американской компании, в долларах", req:1, hint:"Только цифры, например 120000."},
+ {k:"e9b", n:"9.", q:"За какой период эта сумма", t:"radio", req:1, o:["в год (year)","в месяц (month)","в неделю (week)","в час (hour)"]},
+ {k:"e10", n:"10.", q:"Другие выплаты и компенсации (бонусы, жильё, страховка)", hint:"Если ничего, кроме зарплаты, нет — оставьте пустым."},
+ {k:"e11a", n:"11.", q:"Планируемая дата начала работы в США", req:1},
+ {k:"e11b", n:"11.", q:"Планируемая дата окончания", hint:"Мы запрашиваем стандартный срок: 3 года от даты начала. Можно оставить пустым, мы посчитаем сами."},
+ {k:"e12", n:"12.", q:"Чем занимается американская компания (вид бизнеса)", req:1, hint:"Коротко, на английском или русском. Например: venture investments, IT consulting."},
+ {k:"e13", n:"13.", q:"Год основания американской компании", req:1},
+ {k:"e14", n:"14.", q:"Сколько сейчас сотрудников у компании в США", req:1, hint:"Все, кто на зарплате в США, включая Вас, если Вы уже в штате."},
+ {k:"e15", n:"15.", q:"У компании 25 или меньше сотрудников на полной ставке в США, вместе со всеми дочерними и аффилированными компаниями в США?", t:"yn", req:1, hint:"Двое сотрудников на половину ставки считаются как один на полной. От этого ответа зависит размер государственной пошлины."},
+ {k:"e16", n:"16.", q:"Валовой годовой доход компании, в долларах (Gross Annual Income)", req:1, hint:"Берётся из последней налоговой декларации компании: общая сумма продаж (gross receipts or sales)."},
+ {k:"e17", n:"17.", q:"Чистый годовой доход компании, в долларах (Net Annual Income)", req:1, hint:"Тоже из налоговой декларации: прибыль после расходов. Если был убыток, укажите сумму со знаком минус."}
+]},
+
+{part:"Часть 6. Экспортный контроль", items:[
+ {k:"x1", n:"1.-2.", q:"Получите ли Вы на работе доступ к технологиям, на передачу которых иностранцу нужна лицензия правительства США (военные, оборонные, шифрование и т. п.)?", t:"radio", req:1, recOpt:["1. Нет, лицензия не нужна"], pickNote:"Ваш вариант, если работа юридическая и с такими технологиями не связана", o:[
+  "1. Нет, лицензия не нужна",
+  "2. Да, лицензия нужна"]}
+]},
+
+{part:"Часть 7. Кто подписывает петицию от компании", note:"Петицию подписывает руководитель или другое уполномоченное лицо американской компании. Напишите, кто будет подписывать.", items:[
+ {k:"s1a", n:"1.", q:"Фамилия подписанта", req:1},
+ {k:"s1b", n:"1.", q:"Имя подписанта", req:1},
+ {k:"s1c", n:"1.", q:"Должность подписанта", req:1, hint:"Например: CEO, Managing Member, President."},
+ {k:"s3a", n:"3.", q:"Телефон подписанта", req:1},
+ {k:"s3b", n:"3.", q:"Email подписанта", req:1}
+]},
+
+{part:"Приложение L. Сведения для визы L-1A", note:"Это отдельное приложение к форме I-129 именно для визы L.", items:[
+ {k:"l4a", n:"4.a.", q:"В американской компании работает 50 или больше человек?", t:"yn", req:1},
+ {k:"l4b", n:"4.b.", q:"Если да: больше половины из них работают по визам H-1B, L-1A или L-1B?", t:"yn"},
+ {k:"l2", n:"Раздел 1, п. 2.", q:"Были ли Вы или члены Вашей семьи в США в статусе H или L за последние 7 лет?", t:"group", item:"Период", min:1,
+   none:"Нет, в статусе H или L в США не были",
+   hint:"Только периоды, когда человек сам был в США по визе H или L. Время в статусе L-2 или H-4 не указывайте.", f:[
+  {k:"nm", q:"Имя и фамилия", req:1},
+  {k:"cl", q:"Статус (например, H-1B, L-1A)", req:1},
+  {k:"fr", q:"С какой даты", req:1},
+  {k:"to", q:"По какую дату", req:1}]},
+ {k:"l3", n:"Раздел 1, п. 3.", q:"Полное название иностранной компании, в которой Вы работаете", req:1, hint:"Как в регистрационных документах, латиницей."},
+ {k:"l4s", n:"Раздел 1, п. 4.", q:"Адрес иностранной компании: улица, дом, офис", req:1},
+ {k:"l4c", n:"Раздел 1, п. 4.", q:"Город, область, почтовый индекс", req:1},
+ {k:"l4k", n:"Раздел 1, п. 4.", q:"Страна", req:1},
+ {k:"l5a", n:"Раздел 1, п. 5.", q:"С какой даты Вы работаете в иностранной компании", req:1},
+ {k:"l5b", n:"Раздел 1, п. 5.", q:"По какую дату (если работаете сейчас, напишите «по настоящее время»)", req:1},
+ {k:"l5c", n:"Раздел 1, п. 5.", q:"Были ли перерывы в работе (декрет, длительный отпуск, поездки в США)? Если да, опишите даты и причину", hint:"Если перерывов не было, оставьте пустым."},
+ {k:"l6", n:"Раздел 1, п. 6.", q:"Ваши обязанности в иностранной компании за последние 3 года (кратко)", t:"area", req:1, hint:"Кратко, своими словами. Подробное описание обязанностей Вы присылаете отдельно, мы его отредактируем."},
+ {k:"l7", n:"Раздел 1, п. 7.", q:"Ваши обязанности в американской компании (кратко)", t:"area", req:1},
+ {k:"l8", n:"Раздел 1, п. 8.", q:"Ваше образование и опыт работы (кратко)", t:"area", req:1, hint:"Вуз, специальность, год окончания; основные места работы и должности."},
+ {k:"l9", n:"Раздел 1, п. 9.", q:"Как связаны американская и иностранная компании", t:"radio", req:1, o:[
+  "Иностранная компания владеет американской больше чем на 50% (американская — дочерняя)",
+  "Американская компания владеет иностранной больше чем на 50%",
+  "Обеими компаниями владеет один и тот же человек или одна и та же компания больше чем на 50%",
+  "Американская компания — филиал (branch) иностранной, отдельного юрлица нет",
+  "Совместное предприятие 50 на 50",
+  "Другое — опишу в следующем пункте"]},
+ {k:"l10", n:"Раздел 1, п. 10.", q:"Кто владеет каждой компанией и в каких долях", t:"area", req:1, hint:"Пример: «Американская компания: 100% у ООО ... (иностранная компания). Иностранная компания: 60% у Ивана Петрова, 40% у Анны Петровой». Укажите и того, кто фактически управляет каждой компанией."},
+ {k:"l11", n:"Раздел 1, п. 11.", q:"Компании были связаны так же, как сейчас, всё время, пока Вы работали в иностранной компании?", t:"yn", req:1},
+ {k:"l12", n:"Раздел 1, п. 12.", q:"Американская компания начала реально работать (продажи, клиенты, сотрудники) больше года назад?", t:"yn", req:1, hint:"Важна дата начала реальной деятельности, а не только регистрации. Если работает меньше года, это «новый офис», и нужны дополнительные документы."},
+ {k:"l12d", n:"Раздел 1, п. 12.", q:"С какого месяца и года американская компания реально работает", req:1}
+]},
+
+{part:"Семья", items:[
+ {k:"fam", n:"—", q:"Кто из семьи поедет с Вами в США (супруг и дети до 21 года)", t:"group", item:"Член семьи", min:1,
+   none:"Еду одна, без семьи", f:[
+  {k:"ln", q:"Фамилия (латиницей)", req:1},
+  {k:"fn", q:"Имя (латиницей)", req:1},
+  {k:"dob", q:"Дата рождения", req:1},
+  {k:"rel", q:"Кем приходится", t:"radio", req:1, o:["Супруг","Сын","Дочь"]},
+  {k:"loc", q:"Где сейчас находится", t:"radio", req:1, o:["За пределами США","В США"]}]}
+]}
+];
+</script>
+<script>/* Минимальный генератор .docx без внешних библиотек */
+var DOCX = (function(){
+var T=(function(){var c=[];for(var n=0;n<256;n++){var k=n;for(var j=0;j<8;j++)k=k&1?0xEDB88320^(k>>>1):k>>>1;c[n]=k>>>0;}return c;})();
+function crc32(u8){var c=0xFFFFFFFF;for(var i=0;i<u8.length;i++)c=T[(c^u8[i])&0xFF]^(c>>>8);return (c^0xFFFFFFFF)>>>0;}
+function str(s){return new TextEncoder().encode(s);}
+function num(v,n){var a=new Uint8Array(n);for(var i=0;i<n;i++)a[i]=(v>>>(8*i))&0xFF;return a;}
+function cat(arrs){var len=0;arrs.forEach(function(a){len+=a.length;});var out=new Uint8Array(len),o=0;arrs.forEach(function(a){out.set(a,o);o+=a.length;});return out;}
+function zip(files){ // files: [{name, data:Uint8Array}]
+  var local=[],central=[],offset=0;
+  files.forEach(function(f){
+    var nb=str(f.name), c=crc32(f.data), sz=f.data.length;
+    var lh=cat([num(0x04034b50,4),num(20,2),num(0,2),num(0,2),num(0,2),num(0,2),num(c,4),num(sz,4),num(sz,4),num(nb.length,2),num(0,2),nb,f.data]);
+    local.push(lh);
+    central.push(cat([num(0x02014b50,4),num(20,2),num(20,2),num(0,2),num(0,2),num(0,2),num(0,2),num(c,4),num(sz,4),num(sz,4),num(nb.length,2),num(0,2),num(0,2),num(0,2),num(0,2),num(0,4),num(offset,4),nb]));
+    offset+=lh.length;
+  });
+  var cd=cat(central);
+  var end=cat([num(0x06054b50,4),num(0,2),num(0,2),num(files.length,2),num(files.length,2),num(cd.length,4),num(offset,4),num(0,2)]);
+  return new Blob([cat(local.concat([cd,end]))],{type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function runs(text,o){o=o||{};
+  var rpr='<w:rPr>'+(o.b?'<w:b/>':'')+(o.color?'<w:color w:val="'+o.color+'"/>':'')+(o.sz?'<w:sz w:val="'+o.sz+'"/>':'')+(o.shd?'<w:shd w:val="clear" w:fill="'+o.shd+'"/>':'')+'</w:rPr>';
+  return String(text).split('\n').map(function(line,i){
+    return (i?'<w:r>'+rpr+'<w:br/></w:r>':'')+'<w:r>'+rpr+'<w:t xml:space="preserve">'+esc(line)+'</w:t></w:r>';
+  }).join('');
+}
+function p(parts,o){o=o||{};
+  var ppr='<w:pPr>'+(o.style?'<w:pStyle w:val="'+o.style+'"/>':'')+(o.shd?'<w:shd w:val="clear" w:fill="'+o.shd+'"/>':'')+(o.space?'<w:spacing w:before="'+(o.space)+'"/>':'')+'</w:pPr>';
+  return '<w:p>'+ppr+parts+'</w:p>';
+}
+function build(body){
+  var doc='<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>'+body+'<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1000" w:right="900" w:bottom="1000" w:left="900"/></w:sectPr></w:body></w:document>';
+  var ct='<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>';
+  var rels='<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>';
+  return zip([{name:'[Content_Types].xml',data:str(ct)},{name:'_rels/.rels',data:str(rels)},{name:'word/document.xml',data:str(doc)}]);
+}
+
+function tc(text,o,w){o=o||{};
+  return '<w:tc><w:tcPr><w:tcW w:w="'+(w||3000)+'" w:type="dxa"/>'
+    + (o.shd?'<w:shd w:val="clear" w:fill="'+o.shd+'"/>':'')
+    + '<w:tcMar><w:top w:w="60" w:type="dxa"/><w:bottom w:w="60" w:type="dxa"/><w:left w:w="90" w:type="dxa"/><w:right w:w="90" w:type="dxa"/></w:tcMar>'
+    + '</w:tcPr>' + p(runs(text,o)) + '</w:tc>';
+}
+function tr(cells){ return '<w:tr>'+cells.join('')+'</w:tr>'; }
+function table(rows){
+  return '<w:tbl><w:tblPr><w:tblW w:w="10080" w:type="dxa"/>'
+    + '<w:tblBorders>'
+    + ['top','left','bottom','right','insideH','insideV'].map(function(s){return '<w:'+s+' w:val="single" w:sz="4" w:space="0" w:color="E6E9EC"/>';}).join('')
+    + '</w:tblBorders><w:tblLayout w:type="fixed"/></w:tblPr>'
+    + '<w:tblGrid><w:gridCol w:w="900"/><w:gridCol w:w="5580"/><w:gridCol w:w="3600"/></w:tblGrid>'
+    + rows.join('') + '</w:tbl>';
+}
+return {build:build,p:p,runs:runs,tc:tc,tr:tr,table:table};
+})();
+</script>
+<script>(function(){
+const KEY = window.FORM_KEY;
+let store = {};
+try { store = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch(e) { store = {}; }
+let showGaps = false;
+let t=null;
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(store)); } catch(e){} flash(); updateBar(); }
+function flash(){ const el=document.getElementById('saved'); if(!el) return; el.classList.add('on'); clearTimeout(t); t=setTimeout(()=>el.classList.remove('on'),1200); }
+function esc(s){ return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function idOf(p){ return p.replace(/[^a-zA-Z0-9_]/g,'_'); }
+function syncCopies(changedPath){
+  let touched=false;
+  SPEC.forEach((p,pi)=>p.items.forEach(it=>{
+    if(it.t!=='copy') return;
+    const path='p'+pi+'.'+it.k;
+    if(store['copyv2.'+path] !== true) return;
+    Object.keys(it.map).forEach(to=>{
+      const from = it.map[to];
+      if(changedPath && from !== changedPath) return;
+      const v = store[from];
+      if(v !== undefined && store[to] !== v){ store[to] = v; touched = true; }
+    });
+  }));
+  return touched;
+}
+function empty(v){ return v==null || v==='' || (Array.isArray(v) && v.length===0); }
+function isAsk(v){ return v===ASK; }
+
+const OPT_NOTE = 'Заполняйте, если это про Вас. Если нет — просто пропустите.';
+const ASK = '__ASK__';
+
+function fieldHTML(f, path){
+  const v = store[path];
+  const miss = f.req && empty(v);
+  const tags = f.lawyer ? '<span class="law-tag">это заполнит адвокат</span>'
+             : (f.req ? '<span class="req">обязательно</span>'
+             : (f.want ? '<span class="want-tag">желательно</span>'
+             : (f.noTag ? '' : '<span class="opt-tag">если применимо</span>')));
+  const star = f.lawyer ? '' : (f.req ? '<span class="star">*</span>' : (f.want ? '<span class="star want">*</span>' : ''));
+  const hint = f.hint ? f.hint : ((f.req || f.noTag) ? '' : OPT_NOTE);
+  const asked = isAsk(v);
+  function optRow(o, checked, type){
+    const rec = f.recOpt && f.recOpt.indexOf(o)>=0;
+    const t = type || 'radio';
+    return `<label class="opt${rec?' opt-rec':''}"><input type="${t}" data-path="${esc(path)}" name="${idOf(path)}" value="${esc(o)}" ${checked?'checked':''}><span>${esc(o)}${rec?('<b class="pick">← '+esc(f.pickNote||'Ваш вариант, если подаётесь по EB-1A')+'</b>'):''}</span></label>`;
+  }
+  let inner='';
+  if(f.t==='yn'){
+    inner = '<div class="opts">'+optRow('Да', v==='Да')+optRow('Нет', v==='Нет')+'</div>';
+  } else if(f.t==='radio'){
+    inner = '<div class="opts col">'+f.o.map(o=>optRow(o, v===o)).join('')+'</div>';
+  } else if(f.t==='check'){
+    const arr = Array.isArray(v)?v:[];
+    inner = '<div class="opts col">'+f.o.map(o=>optRow(o, arr.indexOf(o)>=0, 'checkbox')).join('')+'</div>';
+  } else if(f.t==='area'){
+    inner = `<textarea rows="3" data-path="${esc(path)}">${(v&&!asked)?esc(v):''}</textarea>`;
+  } else {
+    const ph = f.ph ? ` placeholder="${esc(f.ph)}"` : '';
+    inner = `<input type="text" class="${f.short?'short':''}" data-path="${esc(path)}" value="${(v&&!asked)?esc(v):''}"${ph}>`;
+  }
+  const askBtn = (f.req && (asked || (showGaps && miss))) ? `<button class="askbtn${asked?' on':''}" data-ask="${esc(path)}">${asked?'✓ Уточним вместе — отмечено':'Не знаю ответ'}</button>` : '';
+  return `<div class="field${(showGaps&&miss)?' gap':''}${asked?' asked':''}" data-f="${esc(path)}">
+    <div class="lbl"><span class="num">${f.n?esc(f.n):''}</span><span class="txt">${esc(f.q)}${star}</span>${tags}</div>
+    ${(showGaps&&miss)?'<div class="gapmsg">Здесь пока пусто, а пункт обязательный. Заполните, пожалуйста — или нажмите «Не знаю ответ», и мы разберёмся вместе.</div>':''}
+    ${asked?'<div class="askmsg">Отмечено: уточним этот пункт вместе. В файле для адвоката он будет виден отдельно.</div>':''}
+    ${hint?`<div class="hint">${hint}</div>`:''}
+    ${inner}
+    ${askBtn}
+  </div>`;
+}
+
+function itemNum(it, i, f){
+  if(typeof it.num === 'function') return it.num(i, f);
+  return f.n || '';
+}
+
+function groupHTML(g, path, i, total){
+  const rows = g.f.map(f=>{
+    const ff = Object.assign({}, f, {n: itemNum(g, i, f)});
+    return fieldHTML(ff, path+'.'+i+'.'+f.k);
+  }).join('');
+  const del = (total>1) ? `<button class="del" data-del="${esc(path)}" data-i="${i}">удалить</button>` : '';
+  return `<div class="card"><div class="cardhd">${esc(g.item)} ${i+1}${del}</div>${rows}</div>`;
+}
+
+function render(){
+  const root = document.getElementById('form');
+  root.innerHTML = SPEC.map((p,pi)=>{
+    const body = p.items.map(it=>{
+      const path = 'p'+pi+'.'+it.k;
+      if(it.t==='copy'){
+        const on = store['copyv2.'+path] === true;
+        return `<div class="copybox${on?' on':''}"><label><input type="checkbox" data-copy="${esc(it.k)}" data-pi="${pi}" ${on?'checked':''}><span>${esc(it.q)}</span></label>${it.hint?`<div class="hint">${it.hint}</div>`:''}</div>`;
+      }
+      if(it.t==='group'){
+        const none = it.none && store['none.'+path]===true;
+        const n = Math.max(1, store['count.'+path]||it.min||1);
+        let h = `<div class="group"><div class="glbl"><span class="num">${it.n?esc(it.n):''}</span><span class="txt">${esc(it.q)}</span></div>${it.notice?`<div class="notice">${it.notice}</div>`:''}${it.hint?`<div class="hint">${it.hint}</div>`:''}`;
+        if(it.none) h += `<label class="nonebox"><input type="checkbox" data-none="${esc(path)}" ${none?'checked':''}><span>${esc(it.none)}</span></label>`;
+        if(!none){
+          h += `<div class="cards" data-cards="${esc(path)}">`;
+          for(let i=0;i<n;i++) h += groupHTML(it, path, i, n);
+          h += `</div><button class="add" data-add="${esc(path)}">+ Добавить ещё (${esc(it.item.toLowerCase())})</button>`;
+        }
+        h += `</div>`;
+        return h;
+      }
+      return fieldHTML(it, path);
+    }).join('');
+    return `<section class="part"><h2>${esc(p.part)}</h2>${p.note?`<div class="pnote">${p.note}</div>`:''}${body}</section>`;
+  }).join('');
+  updateBar();
+}
+
+function missing(){
+  const out=[];
+  SPEC.forEach((p,pi)=>{
+    p.items.forEach(it=>{
+      const path='p'+pi+'.'+it.k;
+      if(it.t==='group'){
+        if(it.none && store['none.'+path]===true) return;
+        const n = Math.max(1, store['count.'+path]||it.min||1);
+        for(let i=0;i<n;i++) it.f.forEach(f=>{
+          if(f.req && empty(store[path+'.'+i+'.'+f.k]))
+            out.push({part:p.part, n:itemNum(it,i,f), q:it.item+' '+(i+1)+': '+f.q, path:path+'.'+i+'.'+f.k});
+        });
+      } else if(it.req && empty(store[path])){
+        out.push({part:p.part, n:it.n||'', q:it.q, path:path});
+      }
+    });
+  });
+  return out;
+}
+
+function askedList(){
+  const out=[];
+  SPEC.forEach((p,pi)=>p.items.forEach(it=>{
+    const path='p'+pi+'.'+it.k;
+    if(it.t==='group'){
+      const n = Math.max(1, store['count.'+path]||it.min||1);
+      for(let i=0;i<n;i++) it.f.forEach(f=>{ if(isAsk(store[path+'.'+i+'.'+f.k])) out.push({part:p.part,n:itemNum(it,i,f),q:it.item+' '+(i+1)+': '+f.q}); });
+    } else if(isAsk(store[path])) out.push({part:p.part,n:it.n||'',q:it.q});
+  }));
+  return out;
+}
+function updateBar(){
+  const m = missing().length, a = askedList().length;
+  const el = document.getElementById('cnt');
+  if(!el) return;
+  let s = m===0 ? 'Все обязательные пункты заполнены' : ('Осталось заполнить: '+m);
+  if(a) s += ' · уточним вместе: '+a;
+  el.textContent = s;
+  el.className = m===0 ? 'ok' : 'bad';
+}
+
+document.addEventListener('input', e=>{
+  const el = e.target;
+  if(el.dataset && el.dataset.path && (el.tagName==='TEXTAREA' || el.type==='text')){
+    store[el.dataset.path]=el.value;
+    const w = el.closest('.field'); if(w && el.value) { w.classList.remove('gap'); const g=w.querySelector('.gapmsg'); if(g) g.remove(); }
+    const moved = syncCopies(el.dataset.path);
+    save();
+    if(moved) render();
+  }
+});
+document.addEventListener('change', e=>{
+  const el = e.target;
+  const p = el.dataset && el.dataset.path;
+  if(!p) return;
+  if(el.type==='radio'){ store[p]=el.value; }
+  else if(el.type==='checkbox'){
+    const boxes = document.querySelectorAll('input[type=checkbox][name="'+el.name+'"]');
+    store[p] = Array.from(boxes).filter(b=>b.checked).map(b=>b.value);
+  } else return;
+  const w = el.closest('.field'); if(w){ w.classList.remove('gap'); const g=w.querySelector('.gapmsg'); if(g) g.remove(); }
+  save();
+});
+
+document.addEventListener('click', e=>{
+  const cp = e.target.closest('[data-copy]');
+  if(cp){
+    const pi = Number(cp.dataset.pi);
+    const it = SPEC[pi].items.find(x=>x.k===cp.dataset.copy);
+    const path = 'p'+pi+'.'+it.k;
+    store['copyv2.'+path] = cp.checked;
+    if(cp.checked) syncCopies(null);
+    save(); render(); return;
+  }
+  const nb = e.target.closest('[data-none]');
+  if(nb){ store['none.'+nb.dataset.none] = nb.checked; save(); render(); return; }
+  const q = e.target.closest('[data-ask]');
+  if(q){ e.preventDefault(); const p=q.dataset.ask; store[p] = (store[p]===ASK) ? '' : ASK; save(); render(); return; }
+  const a = e.target.closest('[data-add]');
+  if(a){ const p=a.dataset.add; store['count.'+p]=(store['count.'+p]||1)+1; save(); render(); return; }
+  const d = e.target.closest('[data-del]');
+  if(d){ const p=d.dataset.del; const n=store['count.'+p]||1; if(n>1){ store['count.'+p]=n-1; save(); render(); } return; }
+});
+
+function fmt(v, want){ if(isAsk(v)) return '[ КЛИЕНТ НЕ ЗНАЕТ — УТОЧНИТЬ ]'; if(v==null||v==='') return want?'[ ПУСТО — желательно заполнить ]':'[ ПУСТО ]'; return Array.isArray(v)?(v.length?v.join('; '):'[ ПУСТО ]'):v; }
+function collect(){
+  const miss = missing();
+  let out = document.title + '\n' + '='.repeat(64) + '\n';
+  out += 'Дата выгрузки: ' + new Date().toLocaleString('ru-RU') + '\n';
+  const ask = askedList();
+  out += miss.length===0
+    ? 'СТАТУС: все обязательные пункты заполнены.\n'
+    : ('СТАТУС: НЕ ЗАПОЛНЕНО ОБЯЗАТЕЛЬНЫХ ПУНКТОВ - ' + miss.length + '\n\nСПИСОК ПРОПУСКОВ:\n' +
+       miss.map(m=>'  ! ' + m.part + ' | пункт ' + (m.n||'-') + ' | ' + m.q).join('\n') + '\n');
+  if(ask.length) out += '\nКЛИЕНТ НЕ ЗНАЕТ ОТВЕТ (' + ask.length + ') - УТОЧНИТЬ:\n' +
+       ask.map(m=>'  ? ' + m.part + ' | пункт ' + (m.n||'-') + ' | ' + m.q).join('\n') + '\n';
+  out += '='.repeat(64) + '\n';
+  SPEC.forEach((p,pi)=>{
+    out += '\n' + p.part + '\n' + '-'.repeat(64) + '\n';
+    p.items.forEach(it=>{
+      const path='p'+pi+'.'+it.k;
+      if(it.t==='group'){
+        if(it.none && store['none.'+path]===true){ out += '\n' + (it.n?it.n+' ':'') + it.q + ': ' + it.none + '\n'; return; }
+        const n = Math.max(1, store['count.'+path]||it.min||1);
+        out += '\n' + (it.n?it.n+' ':'') + it.q + '\n';
+        for(let i=0;i<n;i++){
+          out += '  -- ' + it.item + ' ' + (i+1) + '\n';
+          it.f.forEach(f=>{
+            const v=store[path+'.'+i+'.'+f.k];
+            const mark = (f.req && empty(v)) ? '  <<< ПРОПУЩЕНО, ОБЯЗАТЕЛЬНОЕ' : (isAsk(v) ? '  <<< УТОЧНИТЬ' : '');
+            out += '     ' + (itemNum(it,i,f)?itemNum(it,i,f)+' ':'') + f.q + ': ' + fmt(v,f.want) + mark + '\n';
+          });
+        }
+      } else {
+        const v = store[path];
+        const mark = (it.req && empty(v)) ? '  <<< ПРОПУЩЕНО, ОБЯЗАТЕЛЬНОЕ' : (isAsk(v) ? '  <<< УТОЧНИТЬ' : '');
+        out += (it.n?it.n+' ':'') + it.q + ': ' + fmt(v,it.want) + mark + '\n';
+      }
+    });
+  });
+  return out;
+}
+
+
+function pick(re){
+  const ks = Object.keys(store);
+  for(const k of ks){ if(re.test(k) && store[k] && store[k]!==ASK) return String(store[k]).trim(); }
+  return '';
+}
+function clientName(){
+  const ln = pick(/\.b1a$/) || pick(/\.n1a$/) || pick(/\.f1a$/);
+  const fn = pick(/\.b1b$/) || pick(/\.n1b$/) || pick(/\.f1b$/);
+  return [ln, fn].filter(Boolean).join(' ');
+}
+function cssv(n){ return getComputedStyle(document.documentElement).getPropertyValue(n).trim().replace('#',''); }
+const COL={ok:'1D7A43',miss:'C00000',ask:'E07B12',want:'A8560A',dim:'9AA2AA'};
+function cellState(v,req,want){
+  if(isAsk(v)) return {t:'НЕ ЗНАЮ — УТОЧНИТЬ', c:COL.ask, b:1};
+  if(empty(v)){
+    if(req) return {t:'НЕ ЗАПОЛНЕНО', c:COL.miss, b:1};
+    if(want) return {t:'пусто (желательно)', c:COL.want, b:0};
+    return {t:'—', c:COL.dim, b:0};
+  }
+  return {t:(Array.isArray(v)?v.join('; '):v), c:COL.ok, b:1};
+}
+function walk(){
+  const out=[];
+  SPEC.forEach((p,pi)=>{
+    out.push({k:'part', title:p.part});
+    p.items.forEach(it=>{
+      if(it.k==='quest' || it.k==='add') return;
+      const path='p'+pi+'.'+it.k;
+      if(it.t==='group'){
+        if(it.none && store['none.'+path]===true){ out.push({k:'row', n:it.n||'', q:it.q, s:{t:it.none,c:COL.dim,b:0}}); return; }
+        const n = Math.max(1, store['count.'+path]||it.min||1);
+        for(let i=0;i<n;i++){
+          out.push({k:'sub', title:it.item+' '+(i+1)});
+          it.f.forEach(f=>out.push({k:'row', n:itemNum(it,i,f), q:f.q, s:cellState(store[path+'.'+i+'.'+f.k], f.req, f.want)}));
+        }
+      } else {
+        out.push({k:'row', n:it.n||'', q:it.q, s:cellState(store[path], it.req, it.want)});
+      }
+    });
+  });
+  return out;
+}
+function comments(){
+  let out=[];
+  SPEC.forEach((p,pi)=>p.items.forEach(it=>{
+    if(it.k==='quest' || it.k==='add'){ const v=store['p'+pi+'.'+it.k]; if(v && v!==ASK) out.push({q:it.q, v:v}); }
+  }));
+  return out;
+}
+function reportDocx(){
+  const miss = missing(), ask = askedList(), name = clientName();
+  const P=DOCX.p, R=DOCX.runs, TC=DOCX.tc, TR=DOCX.tr, TBL=DOCX.table;
+  const ACC = cssv('--acc')||'2F5596', ACCD = cssv('--accd')||'1F3864', SOFT = cssv('--soft')||'EEF3FA';
+  let b = '';
+  b += P(R(document.title,{b:1,sz:30,color:'FFFFFF'}),{shd:ACCD});
+  b += P(R('Клиент: ',{color:'FFFFFF'})+R(name||'— не указано —',{b:1,color:'FFFFFF'})+R('     '+new Date().toLocaleString('ru-RU'),{color:'FFFFFF'}),{shd:ACCD});
+  b += P(R(''));
+  b += P((miss.length===0 ? R('Заполнено полностью',{b:1,color:COL.ok}) : R('Не заполнено: '+miss.length,{b:1,color:COL.miss}))
+        + (ask.length ? R('        Не знает ответ: '+ask.length,{b:1,color:COL.ask}) : ''));
+  b += P(R('Зелёный — ответ есть.  Красный — обязательный пункт не заполнен.  Оранжевый — клиент не знает ответ и просит уточнить.',{color:'6B7480',sz:17}));
+  let rows=[];
+  walk().forEach(x=>{
+    if(x.k==='part'){ if(rows.length){ b += TBL(rows); rows=[]; } b += P(R(x.title,{b:1,sz:24,color:ACCD}),{shd:SOFT,space:300}); }
+    else if(x.k==='sub'){ rows.push(TR([TC('',{shd:SOFT},900),TC(x.title,{b:1,color:ACCD,shd:SOFT},5580),TC('',{shd:SOFT},3600)])); }
+    else rows.push(TR([TC(x.n,{b:1,color:ACC,sz:18},900), TC(x.q,{color:'3B444E'},5580), TC(x.s.t,{b:x.s.b,color:x.s.c},3600)]));
+  });
+  if(rows.length) b += TBL(rows);
+  const cm = comments();
+  b += P(R('Комментарии и вопросы клиента',{b:1,sz:24,color:ACCD}),{shd:SOFT,space:300});
+  if(cm.length) cm.forEach(c=>{ b += P(R(c.q+':',{b:1,color:ACCD})) + P(R(c.v)); });
+  else b += P(R('Клиент вопросов не оставил.',{color:COL.dim}));
+  b += P(R(''));
+  b += P(R('Анкету заполнил(а): ',{color:'6B7480',sz:18})+R(name||'— имя не указано —',{b:1,color:'6B7480',sz:18})
+       + R('   ·   Форма: '+window.FORM_KEY.toUpperCase().replace('I','I-')+'   ·   '+new Date().toLocaleString('ru-RU'),{color:'6B7480',sz:18}));
+  b += P(R('CLAUDE_DATA:'+JSON.stringify({form:window.FORM_KEY, saved:new Date().toISOString(), answers:store}),{color:'FFFFFF',sz:2}));
+  return DOCX.build(b);
+}
+function reportHTML(){
+  const miss=missing(), ask=askedList(), name=clientName();
+  const ACC='#'+(cssv('--acc')||'2F5596'), ACCD='#'+(cssv('--accd')||'1F3864'), SOFT='#'+(cssv('--soft')||'EEF3FA');
+  let body='';
+  walk().forEach(x=>{
+    if(x.k==='part') body += '<h2>'+esc(x.title)+'</h2>';
+    else if(x.k==='sub') body += '<div class="sub">'+esc(x.title)+'</div>';
+    else body += '<div class="r"><div class="rn">'+esc(x.n)+'</div><div class="rq">'+esc(x.q)+'</div><div class="ra" style="color:#'+x.s.c+';font-weight:'+(x.s.b?700:400)+'">'+esc(x.s.t)+'</div></div>';
+  });
+  const cm=comments();
+  body += '<h2>Комментарии и вопросы клиента</h2><div class="cm">'
+    + (cm.length ? cm.map(c=>'<p><b>'+esc(c.q)+':</b><br>'+esc(c.v).replace(/\n/g,'<br>')+'</p>').join('') : '<p style="color:#9aa2aa">Вопросов нет.</p>')
+    + '</div>';
+  return '<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Проверка ответов — '+esc(document.title)+'</title>'
+   + '<style>body{margin:0;background:#f6f7f9;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#16212e}'
+   + 'header{background:'+ACCD+';color:#fff;padding:18px 20px}header h1{margin:0 0 4px;font-size:19px}header p{margin:0;font-size:13.5px;opacity:.9}'
+   + '.w{max-width:900px;margin:0 auto;padding:0 16px 50px}.w h2{background:'+SOFT+';color:'+ACCD+';font-size:15px;padding:9px 14px;margin:18px 0 0;border-radius:8px 8px 0 0;border-bottom:2px solid '+ACC+'}'
+   + '.r{display:flex;gap:10px;padding:6px 14px;background:#fff;border-bottom:1px solid #f0f2f4}'
+   + '.rn{flex:0 0 58px;color:'+ACC+';font-weight:700;font-size:12.5px}.rq{flex:1;color:#3b444e}.ra{flex:0 0 34%}'
+   + '.sub{background:'+SOFT+';padding:6px 14px;font-weight:700;color:'+ACCD+'}'
+   + '.cm{background:#fff;padding:10px 14px}.chip{display:inline-block;border-radius:20px;padding:4px 12px;font-weight:700;font-size:13px;margin:12px 6px 0 0}'
+   + '@media(max-width:700px){.r{flex-wrap:wrap}.ra{flex:1 1 100%}}</style></head><body>'
+   + '<header><h1>'+esc(document.title)+'</h1><p>'+esc(name||'имя не указано')+' · '+new Date().toLocaleString('ru-RU')+'</p></header><div class="w">'
+   + (miss.length ? '<span class="chip" style="background:#fdecec;color:#c00000">Не заполнено: '+miss.length+'</span>' : '<span class="chip" style="background:#e7f5ec;color:#1d7a43">Заполнено полностью</span>')
+   + (ask.length ? '<span class="chip" style="background:#fff4e3;color:#a8560a">Не знаю ответ: '+ask.length+'</span>' : '')
+   + body + '</div></body></html>';
+}
+const TRMAP={'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'e','ж':'zh','з':'z','и':'i','й':'y','к':'k','л':'l','м':'m','н':'n','о':'o','п':'p','р':'r','с':'s','т':'t','у':'u','ф':'f','х':'kh','ц':'ts','ч':'ch','ш':'sh','щ':'shch','ъ':'','ы':'y','ь':'','э':'e','ю':'yu','я':'ya','і':'i','ї':'yi','є':'ie','ґ':'g'};
+function translit(s){
+  return String(s).split('').map(ch=>{
+    const low = ch.toLowerCase();
+    if(TRMAP[low] !== undefined){ const t = TRMAP[low]; return ch===low ? t : (t.charAt(0).toUpperCase()+t.slice(1)); }
+    return ch;
+  }).join('');
+}
+function fileBase(){
+  const n = translit(clientName()).replace(/[^A-Za-z0-9_-]+/g,'_').replace(/^_+|_+$/g,'');
+  return (window.FORM_KEY.toUpperCase()) + (n?('_'+n):'') + '_otvety';
+}
+
+function modal(o){
+  return new Promise(res=>{
+    const veil = document.getElementById('veil');
+    const box = veil.querySelector('.box');
+    box.className = 'box wide';
+    box.innerHTML =
+      (o.icon ? '<div class="mi '+(o.tone||'')+'">'+o.icon+'</div>' : '')
+      + (o.title ? '<div class="mt '+(o.tone||'')+'">'+o.title+'</div>' : '')
+      + '<div class="ml">' + (o.lines||[]).map(l=>'<p>'+l+'</p>').join('') + '</div>'
+      + '<div class="mb">' + (o.buttons||[{label:'Понятно',primary:1}]).map((b,i)=>
+          '<button data-i="'+i+'" class="'+(b.primary?'mp':'ms')+'">'+b.label+'</button>').join('') + '</div>';
+    veil.classList.add('on');
+    box.querySelectorAll('.mb button').forEach(btn=>{
+      btn.onclick = ()=>{ veil.classList.remove('on'); box.className='box'; res(Number(btn.dataset.i)); };
+    });
+  });
+}
+window.addEventListener('DOMContentLoaded', ()=>{
+  render();
+  const sndBtn = document.getElementById('snd');
+  const veil = document.getElementById('veil');
+  const boxHTML = '<div class="spin"></div><div class="txt">Готовим файл…</div>';
+  function showVeil(t){ const b=veil.querySelector('.box'); b.className='box'; b.innerHTML = boxHTML; if(t) b.querySelector('.txt').textContent = t; veil.classList.add('on'); }
+  function hideVeil(){ veil.classList.remove('on'); }
+  function lock(on){ sndBtn.disabled = on; sndBtn.title = on ? 'Сначала нажмите «Я всё заполнил(а) — проверить»' : ''; }
+  lock(true);
+
+  document.getElementById('ck').onclick = async ()=>{
+    showGaps = true; render(); lock(false);
+    const m = missing(), a = askedList();
+    if(m.length===0){
+      sndBtn.classList.add('ready');
+      await modal({
+        icon:'✓', tone:'ok', title:'Всё готово',
+        lines: ['Все обязательные пункты заполнены.']
+          .concat(a.length ? ['Пунктов, где Вы отметили «не знаю ответ»: <b>'+a.length+'</b>. Мы найдём эти данные вместе — заполнять их сейчас не нужно.'] : [])
+          .concat(['Теперь нажмите <b>«Отправить»</b> и выберите Telegram.']),
+        buttons:[{label:'Хорошо', primary:1}]
+      });
+    } else {
+      sndBtn.classList.remove('ready');
+      await modal({
+        icon:'!', tone:'warn', title:'Осталось заполнить: '+m.length,
+        lines: ['Пропущенные пункты подсвечены <b style="color:#c00000">красным</b> — пролистайте анкету и заполните их.',
+                'Без этих данных форму подать нельзя.',
+                'Не знаете ответ? Нажмите под пунктом кнопку <b>«Не знаю ответ»</b> — и мы разберёмся вместе.'],
+        buttons:[{label:'Вернуться к анкете', primary:1}]
+      });
+      const first = document.querySelector('.field.gap');
+      if(first) first.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  };
+
+  sndBtn.onclick = async ()=>{
+    const m = missing(), a = askedList();
+    if(m.length){
+      const r = await modal({
+        icon:'!', tone:'warn', title:'Ещё не всё заполнено',
+        lines: ['Обязательных пунктов без ответа: <b>'+m.length+'</b>.'+(a.length?' Отмечено «не знаю ответ»: <b>'+a.length+'</b>.':''),
+                'Вы всё равно к ним вернётесь — без них форму подать нельзя.',
+                'Можно отправить как есть, а можно вернуться и дозаполнить.'],
+        buttons:[{label:'Вернуться', primary:1}, {label:'Отправить как есть'}]
+      });
+      if(r===0){ showGaps=true; render(); return; }
+    }
+    showVeil('Готовим файл…');
+    await new Promise(r=>setTimeout(r,60));
+    let blob, file;
+    const fname = fileBase()+'.docx';
+    try{
+      blob = reportDocx();
+      file = new File([blob], fname, {type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+    }catch(err){
+      hideVeil();
+      await modal({icon:'!', tone:'warn', title:'Не удалось собрать файл', lines:['Попробуйте нажать «Отправить» ещё раз.']});
+      return;
+    }
+    if(navigator.canShare && navigator.canShare({files:[file]})){
+      hideVeil();
+      try{
+        await navigator.share({files:[file]});
+        await modal({icon:'✓', tone:'ok', title:'Файл отправлен', lines:['Спасибо! Мы получим Вашу анкету и свяжемся с Вами.'], buttons:[{label:'Закрыть', primary:1}]});
+        return;
+      }catch(err){
+        hideVeil();
+        if(err && err.name==='AbortError') return;
+      }
+    }
+    const lnk=document.createElement('a'); lnk.href=URL.createObjectURL(blob);
+    lnk.download = fname; lnk.click();
+    hideVeil();
+    await modal({
+      icon:'✓', tone:'ok', title:'Файл сохранён',
+      lines:['<span class="fname">'+esc(fname)+'</span>',
+             'Остался один шаг: откройте наш чат в <b>Telegram</b> и прикрепите этот файл.',
+             'На компьютере он лежит в папке <b>Загрузки</b> (Downloads).'],
+      buttons:[{label:'Открыть Telegram', primary:1}, {label:'Закрыть'}]
+    }).then(r=>{ if(r===0) window.open('https://web.telegram.org/','_blank','noopener'); });
+  };
+});
+})();
+</script>
+</body></html>
